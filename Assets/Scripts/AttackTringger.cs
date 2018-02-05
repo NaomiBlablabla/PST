@@ -5,12 +5,14 @@ using UnityEngine;
 public class AttackTringger : MonoBehaviour {
 
     [SerializeField]
-    private int dmg = 20;
+    private int dmg = 10;
+
+
 
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.isTrigger != true && col.CompareTag("Enemy"));
+        if (col.isTrigger != true && col.CompareTag("Enemy"))
         {
             col.gameObject.GetComponent<Enemy>().Damage(dmg);//SendMessageUpwards("Damage", dmg);
 
