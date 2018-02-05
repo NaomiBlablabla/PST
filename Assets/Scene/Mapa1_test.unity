@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12626975}
   - component: {fileID: 12626974}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,12 +251,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 12626973}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 41.76, y: -3.22, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2383335, y: 1.4790514, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1001 &17837042
 Prefab:
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19821097}
   - component: {fileID: 19821098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30024738}
   - component: {fileID: 30024739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 42336170}
   - component: {fileID: 42336172}
   - component: {fileID: 42336171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47627904}
   - component: {fileID: 47627905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,11 @@ GameObject:
   m_Component:
   - component: {fileID: 55868547}
   - component: {fileID: 55868546}
+  - component: {fileID: 55868551}
+  - component: {fileID: 55868550}
+  - component: {fileID: 55868549}
   - component: {fileID: 55868545}
+  - component: {fileID: 55868552}
   - component: {fileID: 55868548}
   m_Layer: 0
   m_Name: Enemy
@@ -920,10 +924,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.30366802, y: 0}
+  m_Offset: {x: -0.2950449, y: 4.321382}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -934,7 +938,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.937336, y: 5.25}
+  m_Size: {x: 24.863615, y: 13.892762}
   m_EdgeRadius: 0
 --- !u!212 &55868546
 SpriteRenderer:
@@ -987,12 +991,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55868544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.29, y: -1.85, z: 0.10800317}
-  m_LocalScale: {x: 0.61737597, y: 0.61737597, z: 0.61737597}
+  m_LocalPosition: {x: 32.62, y: -2.75, z: 0.10800317}
+  m_LocalScale: {x: 0.32804233, y: 0.3280424, z: 0.3280424}
   m_Children:
   - {fileID: 1127710383}
+  - {fileID: 1594841485}
+  - {fileID: 1839675005}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &55868548
 MonoBehaviour:
@@ -1009,6 +1015,218 @@ MonoBehaviour:
     maxHealth: 100
     curHealth: 0
   statusIndicator: {fileID: 1127710384}
+--- !u!114 &55868549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55868544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d6bebf98559bf448936a014a825662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  velocity: 3
+  colliding: 0
+  sightStart: {fileID: 1594841485}
+  sightEnd: {fileID: 1839675005}
+  detectWhat:
+    serializedVersion: 2
+    m_Bits: 512
+  target: {fileID: 0}
+  updateRate: 3
+  speed: 8000
+  fMode: 0
+  pathIsEnded: 0
+  nextWaypointDistance: 1
+--- !u!50 &55868550
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55868544}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 2
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &55868551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55868544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!61 &55868552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55868544}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.33, y: 5.25}
+    newSize: {x: 3.33, y: 5.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.33, y: 5.25}
+  m_EdgeRadius: 0
+--- !u!1 &57083726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 57083728}
+  - component: {fileID: 57083727}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &57083727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57083726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAIIezF0cpXHQIAAH0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BXK50D5wWLILYFdkgMLtWwqZyGPsQpZcukRFrb494xkGRPnhNQ9j57WmM+ICd0ANVKtFSs2soDo6yhy5+jLKCKeeyOGSYQTRJiWNRjF6Ddx5C42RtAKVkpVPxdHWEptNMIl4RqQUtK4bIHQ5yj6wJ/xwqVc8JTm7nTF0yIe3fBIQRhQfWi6mMxn02mWZSFjHE+SNMvyPPaQS20zraCc1A0Ue3aFvkDWtUoSHyZwvhDhhqGSc6aDushcGj/8G7m42QtGcFIvJ8VrBexYmXC5J27LUoMJNihyWTGFhrUVo+/SVK5STfSp1fSHcOt65LO519MW3fzHj1u5pZL1j65vErsepmL0hAop0Q40ysIAXfW6E+/MmfATOXD4XYF4lWslrSj6VKshXfXX+2TLCuipx1ulA9A2vdWd092TuhFufviPJWf1wVGTaQvsufRW+00AhY/yEwX7PdGhBKJOxS8N7+T4uFCBeGFKG6TClMLJO0irXGj07C1z01izlEqAh4PoBgTh5rLDMmb4ggPuoe2AeSHukwnNA9d9EYMUD/fxcTygdvJ8fyxdyfMGdLW1hjMBvWhHvKJPSylEu2CPnnRpe6tKQh/SjpYV/25WlEJK8nkZT59ofohJPJ4VBXlalNMky4o4oWnkV48JnJPwXSs02IOvJvriAves+7MYrRVp/LIXipzX7FrLB8uZKOWeKgCxbSt44be/UEsDBBQAAAgIAAAIIexu4XRLNAAAADcAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RslIoKSpN1VFQKs7IL3etKClKBAqlJeYUg8QKMsvyS4B8JefUvJLUIqVaAFBLAwQUAAAICAAACCHsgeUD/m0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9QzNNBRUEovSizIKAaKGII4pZkpIHa0klGqUaK5RZqBiWmyeZJBooGuWUpKoqllmomhsXGKgWGykVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsxdHKVx0CAAB9BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsbuF0SzQAAAA3AAAAEgAkAAAAAAAAAAAAAABqAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7IHlA/5tAAAAeAAAAAkAJAAAAAAAAAAAAAAA8gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACqAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _NodeConnection: {r: 1, g: 1, b: 1, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  minAreaSize: 0
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &57083728
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57083726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.26, y: -2.12, z: 0}
+  m_LocalScale: {x: 1, y: 1.2903471, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58849558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1237,7 @@ GameObject:
   - component: {fileID: 58849559}
   - component: {fileID: 58849561}
   - component: {fileID: 58849560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59110170}
   - component: {fileID: 59110169}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,12 +1392,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59110168}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 41.7, y: 0.72, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8524438, y: 1.4798015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &60900003
 GameObject:
@@ -1247,13 +1465,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60900003}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.15382493, w: 0.98809814}
+  m_LocalPosition: {x: -3.51, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 351307313}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 57.143}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.697}
 --- !u!4 &64573236 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 0ce4cbc241d3aca4da0b94a0ffa0d51f, type: 2}
@@ -1297,7 +1515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70085904}
   - component: {fileID: 70085903}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,12 +1572,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70085902}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7079457, w: 0.7062668}
-  m_LocalPosition: {x: 73.9, y: 2.56, z: 0}
-  m_LocalScale: {x: 3.8016117, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0.009071112, w: 0.9999589}
+  m_LocalPosition: {x: 1.3839471, y: 12.813592, z: 0}
+  m_LocalScale: {x: 1.3370564, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.136}
 --- !u!1001 &70835483
 Prefab:
@@ -1603,7 +1821,7 @@ GameObject:
   - component: {fileID: 93591354}
   - component: {fileID: 93591356}
   - component: {fileID: 93591355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1974,7 @@ GameObject:
   - component: {fileID: 102976673}
   - component: {fileID: 102976675}
   - component: {fileID: 102976674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +2073,7 @@ GameObject:
   - component: {fileID: 112639296}
   - component: {fileID: 112639298}
   - component: {fileID: 112639297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1953,7 +2171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113821455}
   - component: {fileID: 113821456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2026,7 +2244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114709120}
   - component: {fileID: 114709121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115012679}
   - component: {fileID: 115012678}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,12 +2374,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115012677}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 34.428, y: 0.0728434, z: 0}
-  m_LocalScale: {x: 1.9577315, y: 1.9577312, z: 1.9577312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0396984, y: -1.0810888, z: 0}
+  m_LocalScale: {x: 0.68854976, y: 0.6885497, z: 0.6885498}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1001 &117371519
 Prefab:
@@ -2231,7 +2449,7 @@ GameObject:
   - component: {fileID: 119354006}
   - component: {fileID: 119354007}
   - component: {fileID: 119354008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2329,7 +2547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 119736415}
   - component: {fileID: 119736414}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2386,12 +2604,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 119736413}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 37.410004, y: 5.9199996, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1001 &122521596
 Prefab:
@@ -2455,7 +2673,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 130458851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alcantarilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2560,8 +2778,9 @@ Transform:
   - {fileID: 224673191}
   - {fileID: 2071276571}
   - {fileID: 1843079834}
+  - {fileID: 432640591}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137021880
 GameObject:
@@ -2573,7 +2792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137021881}
   - component: {fileID: 137021882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PrototypeWhite04x01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,7 +2872,7 @@ GameObject:
   - component: {fileID: 140797007}
   - component: {fileID: 140797009}
   - component: {fileID: 140797008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2868,13 +3087,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145863138}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2614775, w: 0.9652096}
-  m_LocalPosition: {x: 66.73, y: 4.67, z: 0}
-  m_LocalScale: {x: 1.4341469, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9916154, w: 0.12922454}
+  m_LocalPosition: {x: 12.78278, y: -10.072088, z: 0}
+  m_LocalScale: {x: 0.55055565, y: 0.8810843, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 43
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.316002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.15001}
 --- !u!1 &147167156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,7 +3104,7 @@ GameObject:
   - component: {fileID: 147167157}
   - component: {fileID: 147167159}
   - component: {fileID: 147167158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3125,7 +3344,7 @@ GameObject:
   - component: {fileID: 159094605}
   - component: {fileID: 159094607}
   - component: {fileID: 159094606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3224,7 +3443,7 @@ GameObject:
   - component: {fileID: 163704611}
   - component: {fileID: 163704613}
   - component: {fileID: 163704612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,7 +3541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165373353}
   - component: {fileID: 165373352}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3379,12 +3598,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165373351}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 94.51, y: 9.11, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.80515975, y: 20.097713, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &165922117
 GameObject:
@@ -3495,7 +3714,7 @@ GameObject:
   - component: {fileID: 171013649}
   - component: {fileID: 171013651}
   - component: {fileID: 171013650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3584,6 +3803,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &175012212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 175012213}
+  m_Layer: 9
+  m_Name: VIGAS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &175012213
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175012212}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
+  m_LocalPosition: {x: 37.410004, y: 5.9199996, z: 0}
+  m_LocalScale: {x: 2.8432689, y: 2.8432689, z: 2.8432674}
+  m_Children:
+  - {fileID: 119736415}
+  - {fileID: 2029093095}
+  - {fileID: 1441154484}
+  - {fileID: 1582224907}
+  - {fileID: 830069406}
+  - {fileID: 70085904}
+  - {fileID: 165373353}
+  - {fileID: 1739066562}
+  - {fileID: 1791241222}
+  - {fileID: 1785520882}
+  - {fileID: 1004189948}
+  - {fileID: 394480722}
+  - {fileID: 393407300}
+  - {fileID: 1517384413}
+  - {fileID: 12626975}
+  - {fileID: 115012679}
+  - {fileID: 2130375558}
+  - {fileID: 59110170}
+  - {fileID: 1372025591}
+  - {fileID: 281809610}
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179801374
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,7 +3860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179801375}
   - component: {fileID: 179801376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3671,7 +3938,7 @@ GameObject:
   - component: {fileID: 194284656}
   - component: {fileID: 194284658}
   - component: {fileID: 194284657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3770,7 +4037,7 @@ GameObject:
   - component: {fileID: 196721869}
   - component: {fileID: 196721871}
   - component: {fileID: 196721870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3899,7 +4166,7 @@ GameObject:
   - component: {fileID: 201143242}
   - component: {fileID: 201143244}
   - component: {fileID: 201143243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3998,7 +4265,7 @@ GameObject:
   - component: {fileID: 202151607}
   - component: {fileID: 202151609}
   - component: {fileID: 202151608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4154,11 +4421,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206315974}
   m_LocalRotation: {x: -0, y: -0, z: 0.0007520602, w: 0.99999976}
-  m_LocalPosition: {x: 102.73, y: -23.01, z: 0}
-  m_LocalScale: {x: 0.28580627, y: 0.13956952, z: 0.13956952}
+  m_LocalPosition: {x: 107.29688, y: -90.63796, z: 0}
+  m_LocalScale: {x: 3.0242732, y: 2.0978913, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.086}
 --- !u!1 &210951920
 GameObject:
@@ -4268,7 +4535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215427510}
   - component: {fileID: 215427511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4341,7 +4608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219807974}
   - component: {fileID: 219807975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4415,7 +4682,7 @@ GameObject:
   - component: {fileID: 224673191}
   - component: {fileID: 224673193}
   - component: {fileID: 224673192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4522,7 +4789,7 @@ GameObject:
   - component: {fileID: 234257680}
   - component: {fileID: 234257681}
   - component: {fileID: 234257682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4675,7 +4942,7 @@ GameObject:
   - component: {fileID: 237203152}
   - component: {fileID: 237203154}
   - component: {fileID: 237203153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4773,7 +5040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237511662}
   - component: {fileID: 237511663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,7 +5117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248948568}
   - component: {fileID: 248948569}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,7 +5221,7 @@ GameObject:
   - component: {fileID: 266416184}
   - component: {fileID: 266416186}
   - component: {fileID: 266416185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5111,7 +5378,7 @@ GameObject:
   - component: {fileID: 271797700}
   - component: {fileID: 271797702}
   - component: {fileID: 271797701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5258,6 +5525,105 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ce4cbc241d3aca4da0b94a0ffa0d51f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &281809609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 281809610}
+  - component: {fileID: 281809612}
+  - component: {fileID: 281809611}
+  m_Layer: 9
+  m_Name: Doner Kebab doner kebab (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &281809610
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281809609}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70151, w: 0.71265966}
+  m_LocalPosition: {x: 3.046, y: -6.488, z: 0}
+  m_LocalScale: {x: 0.16179265, y: 0.16179265, z: 0.16179271}
+  m_Children: []
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &281809611
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281809609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.35, y: 2.7}
+    newSize: {x: 4.35, y: 2.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.35, y: 2.7}
+  m_EdgeRadius: 0
+--- !u!212 &281809612
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281809609}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: de366366846ca334286c5088ec3acd76, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.35, y: 2.7}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &290511093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,7 +5634,7 @@ GameObject:
   - component: {fileID: 290511094}
   - component: {fileID: 290511096}
   - component: {fileID: 290511095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5493,7 +5859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301961402}
   - component: {fileID: 301961403}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5566,7 +5932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302857044}
   - component: {fileID: 302857045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5643,7 +6009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314120048}
   - component: {fileID: 314120049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5716,7 +6082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314534775}
   - component: {fileID: 314534776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5872,13 +6238,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 318973358}
-  m_LocalRotation: {x: -0, y: -0, z: 0.27746224, w: 0.9607366}
-  m_LocalPosition: {x: 45.54, y: 3.39, z: 0}
-  m_LocalScale: {x: 2.2964816, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9923142, w: 0.12374362}
+  m_LocalPosition: {x: 18.661709, y: -15.288479, z: 0}
+  m_LocalScale: {x: 0.8830671, y: 0.8794963, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32.218002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.78401}
 --- !u!1 &327678670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,7 +6255,7 @@ GameObject:
   - component: {fileID: 327678671}
   - component: {fileID: 327678673}
   - component: {fileID: 327678672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5988,7 +6354,7 @@ GameObject:
   - component: {fileID: 328020768}
   - component: {fileID: 328020770}
   - component: {fileID: 328020769}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6087,7 +6453,7 @@ GameObject:
   - component: {fileID: 329854779}
   - component: {fileID: 329854780}
   - component: {fileID: 329854781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6185,7 +6551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335546154}
   - component: {fileID: 335546155}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6262,7 +6628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342495847}
   - component: {fileID: 342495848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6464,8 +6830,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 351307312}
   m_LocalRotation: {x: -0, y: -0, z: 0.47825342, w: 0.8782219}
-  m_LocalPosition: {x: 85.64, y: -15.02, z: 0}
-  m_LocalScale: {x: 0.28580636, y: 0.13956955, z: 0.13956952}
+  m_LocalPosition: {x: -73.541664, y: 29.461079, z: 0}
+  m_LocalScale: {x: 3.9216607, y: 1.6596669, z: 1}
   m_Children:
   - {fileID: 60900005}
   - {fileID: 5292161}
@@ -6475,8 +6841,8 @@ Transform:
   - {fileID: 1843103956}
   - {fileID: 1671608062}
   - {fileID: 292497867}
-  m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351744443
 GameObject:
@@ -6487,7 +6853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 351744444}
   - component: {fileID: 351744445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6625,7 +6991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355228380}
   - component: {fileID: 355228381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6876,7 +7242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379783333}
   - component: {fileID: 379783334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6953,7 +7319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393407300}
   - component: {fileID: 393407299}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7010,12 +7376,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393407298}
-  m_LocalRotation: {x: -0, y: -0, z: -0.42657262, w: 0.9044534}
-  m_LocalPosition: {x: 107.88, y: 9.7, z: 0}
-  m_LocalScale: {x: 2.5834787, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: 0.330482, w: 0.9438123}
+  m_LocalPosition: {x: -0.93849754, y: 24.802734, z: 0}
+  m_LocalScale: {x: 0.9086299, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50.500004}
 --- !u!1001 &393415140
 Prefab:
@@ -7108,7 +7474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394480722}
   - component: {fileID: 394480721}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7165,12 +7531,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394480720}
-  m_LocalRotation: {x: -0, y: -0, z: -0.91433734, w: 0.40495348}
-  m_LocalPosition: {x: 95.67, y: 9.81, z: 0}
-  m_LocalScale: {x: 2.5834787, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3675324, w: 0.9300108}
+  m_LocalPosition: {x: -1.0448916, y: 20.509523, z: 0}
+  m_LocalScale: {x: 0.9086302, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -132.224}
 --- !u!1001 &397372042
 Prefab:
@@ -7305,7 +7671,7 @@ GameObject:
   - component: {fileID: 412016492}
   - component: {fileID: 412016494}
   - component: {fileID: 412016493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7403,7 +7769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 413612472}
   - component: {fileID: 413612473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7477,7 +7843,7 @@ GameObject:
   - component: {fileID: 417629349}
   - component: {fileID: 417629348}
   - component: {fileID: 417629347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7752,16 +8118,115 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 423879382}
   m_LocalRotation: {x: -0, y: -0, z: 0.0034877798, w: 0.9999939}
-  m_LocalPosition: {x: 90.22, y: -12.1, z: 0}
-  m_LocalScale: {x: 0.2577801, y: 0.06652842, z: 0.13956952}
+  m_LocalPosition: {x: -25.078196, y: 73.3521, z: 0}
+  m_LocalScale: {x: 2.7277668, y: 0.9999856, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.4}
 --- !u!4 &426378799 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 0ce4cbc241d3aca4da0b94a0ffa0d51f, type: 2}
   m_PrefabInternal: {fileID: 1789923800}
+--- !u!1 &432640590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 432640591}
+  - component: {fileID: 432640593}
+  - component: {fileID: 432640592}
+  m_Layer: 8
+  m_Name: suelo_alc (88)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432640591
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432640590}
+  m_LocalRotation: {x: -0, y: -0, z: -0.010107012, w: 0.9999489}
+  m_LocalPosition: {x: 5.826, y: 2.386, z: 0}
+  m_LocalScale: {x: 0.5323819, y: 0.70747, z: 0.7074699}
+  m_Children: []
+  m_Father: {fileID: 130458851}
+  m_RootOrder: 88
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.1580001}
+--- !u!61 &432640592
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432640590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0283266, y: 0.007553678}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 0.23}
+    newSize: {x: 1.5, y: 0.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4433467, y: 0.08647824}
+  m_EdgeRadius: 0
+--- !u!212 &432640593
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432640590}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 2e7995904383b334b9c9fdfedd836ddb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 7caa9210d2defed47846b5adf155813c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 0.23}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1001 &442767040
 Prefab:
   m_ObjectHideFlags: 0
@@ -7825,7 +8290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443079462}
   - component: {fileID: 443079463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7898,7 +8363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 453307330}
   - component: {fileID: 453307331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7971,7 +8436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459554407}
   - component: {fileID: 459554408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8044,7 +8509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460974759}
   - component: {fileID: 460974760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8217,7 +8682,7 @@ GameObject:
   - component: {fileID: 484297637}
   - component: {fileID: 484297639}
   - component: {fileID: 484297638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8436,7 +8901,7 @@ GameObject:
   - component: {fileID: 508487161}
   - component: {fileID: 508487163}
   - component: {fileID: 508487162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8535,7 +9000,7 @@ GameObject:
   - component: {fileID: 510974600}
   - component: {fileID: 510974602}
   - component: {fileID: 510974601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8652,7 +9117,7 @@ Transform:
   - {fileID: 1391934764}
   - {fileID: 2118520013}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515867267
 GameObject:
@@ -8664,7 +9129,7 @@ GameObject:
   - component: {fileID: 515867268}
   - component: {fileID: 515867270}
   - component: {fileID: 515867269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_22 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8762,7 +9227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523257062}
   - component: {fileID: 523257063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8836,7 +9301,7 @@ GameObject:
   - component: {fileID: 525346153}
   - component: {fileID: 525346155}
   - component: {fileID: 525346154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8935,7 +9400,7 @@ GameObject:
   - component: {fileID: 530449477}
   - component: {fileID: 530449479}
   - component: {fileID: 530449478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9033,7 +9498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541767700}
   - component: {fileID: 541767701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9211,7 +9676,7 @@ GameObject:
   - component: {fileID: 556488585}
   - component: {fileID: 556488587}
   - component: {fileID: 556488586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9309,7 +9774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557767279}
   - component: {fileID: 557767280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rejas (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9382,7 +9847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564406844}
   - component: {fileID: 564406845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9506,7 +9971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578754412
 GameObject:
@@ -9518,7 +9983,7 @@ GameObject:
   - component: {fileID: 578754413}
   - component: {fileID: 578754415}
   - component: {fileID: 578754414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9617,7 +10082,7 @@ GameObject:
   - component: {fileID: 591814472}
   - component: {fileID: 591814474}
   - component: {fileID: 591814473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9814,7 +10279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600590731}
   - component: {fileID: 600590732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9945,11 +10410,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 602200231}
   m_LocalRotation: {x: -0, y: -0, z: 0.0050976207, w: 0.99998707}
-  m_LocalPosition: {x: 98.398, y: -17.527, z: 0}
-  m_LocalScale: {x: 0.09450421, y: 0.070433155, z: 0.13956952}
+  m_LocalPosition: {x: 61.457645, y: -8.222063, z: 0}
+  m_LocalScale: {x: 1.0000437, y: 1.0586603, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.58400005}
 --- !u!1001 &603352667
 Prefab:
@@ -10019,7 +10484,7 @@ GameObject:
   - component: {fileID: 611032272}
   - component: {fileID: 611032274}
   - component: {fileID: 611032273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10204,12 +10669,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617775515}
-  m_LocalRotation: {x: -0, y: -0, z: -0.16295674, w: 0.98663324}
-  m_LocalPosition: {x: 43.271, y: 7.457, z: 0}
-  m_LocalScale: {x: 1.2234606, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.8361257, w: 0.548538}
+  m_LocalPosition: {x: 18.086166, y: -16.8407, z: 0}
+  m_LocalScale: {x: 0.4371622, y: 0.9470604, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.757}
 --- !u!1 &621187764
 GameObject:
@@ -10221,7 +10686,7 @@ GameObject:
   - component: {fileID: 621187765}
   - component: {fileID: 621187767}
   - component: {fileID: 621187766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10373,7 +10838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633097644}
   - component: {fileID: 633097645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tragaperras (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10446,7 +10911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637396113}
   - component: {fileID: 637396114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10519,7 +10984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 638642431}
   - component: {fileID: 638642432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10592,7 +11057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642173346}
   - component: {fileID: 642173347}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10666,7 +11131,7 @@ GameObject:
   - component: {fileID: 644194744}
   - component: {fileID: 644194743}
   - component: {fileID: 644194742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10909,7 +11374,7 @@ GameObject:
   - component: {fileID: 658397041}
   - component: {fileID: 658397042}
   - component: {fileID: 658397043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tapa_tuberia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11045,7 +11510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658609522}
   - component: {fileID: 658609523}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11344,7 +11809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670994139}
   - component: {fileID: 670994140}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11490,7 +11955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673042135}
   - component: {fileID: 673042136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11564,7 +12029,7 @@ GameObject:
   - component: {fileID: 673357845}
   - component: {fileID: 673357847}
   - component: {fileID: 673357846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11662,7 +12127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 677554311}
   - component: {fileID: 677554312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11735,7 +12200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678102760}
   - component: {fileID: 678102761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11809,7 +12274,7 @@ GameObject:
   - component: {fileID: 685929324}
   - component: {fileID: 685929323}
   - component: {fileID: 685929322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11908,7 +12373,7 @@ GameObject:
   - component: {fileID: 707588565}
   - component: {fileID: 707588567}
   - component: {fileID: 707588566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12089,13 +12554,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709514815}
-  m_LocalRotation: {x: -0, y: -0, z: 0.23633765, w: 0.971671}
-  m_LocalPosition: {x: 32.213, y: 0.21399993, z: 0}
-  m_LocalScale: {x: 2.2964816, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9862579, w: 0.165213}
+  m_LocalPosition: {x: 23.038752, y: -18.008818, z: 0}
+  m_LocalScale: {x: 0.8790092, y: 0.883883, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.341002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 160.981}
 --- !u!1 &709640299
 GameObject:
   m_ObjectHideFlags: 0
@@ -12131,7 +12596,7 @@ Transform:
   - {fileID: 144861650}
   - {fileID: 1068231671}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712510327
 GameObject:
@@ -12143,7 +12608,7 @@ GameObject:
   - component: {fileID: 712510328}
   - component: {fileID: 712510330}
   - component: {fileID: 712510329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12242,7 +12707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712652026}
   - component: {fileID: 712652027}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PrototypeWhite04x01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12318,7 +12783,7 @@ GameObject:
   - component: {fileID: 715379300}
   - component: {fileID: 715379302}
   - component: {fileID: 715379301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12475,7 +12940,7 @@ GameObject:
   - component: {fileID: 729658281}
   - component: {fileID: 729658280}
   - component: {fileID: 729658279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12574,7 +13039,7 @@ GameObject:
   - component: {fileID: 730471990}
   - component: {fileID: 730471991}
   - component: {fileID: 730471992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12772,7 +13237,7 @@ GameObject:
   - component: {fileID: 739909196}
   - component: {fileID: 739909198}
   - component: {fileID: 739909197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_22 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12928,7 +13393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749955409}
   - component: {fileID: 749955410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tragaperras (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13002,7 +13467,7 @@ GameObject:
   - component: {fileID: 751218566}
   - component: {fileID: 751218568}
   - component: {fileID: 751218567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13158,7 +13623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757958296}
   - component: {fileID: 757958297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rejas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13231,7 +13696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758259605}
   - component: {fileID: 758259606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13308,7 +13773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759861664}
   - component: {fileID: 759861665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13402,7 +13867,7 @@ Transform:
   - {fileID: 1012610292}
   - {fileID: 1222206378}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773831362
 GameObject:
@@ -13487,7 +13952,7 @@ GameObject:
   - component: {fileID: 780283431}
   - component: {fileID: 780283433}
   - component: {fileID: 780283432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13586,7 +14051,7 @@ GameObject:
   - component: {fileID: 780304107}
   - component: {fileID: 780304109}
   - component: {fileID: 780304108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13846,7 +14311,7 @@ GameObject:
   - component: {fileID: 800691633}
   - component: {fileID: 800691635}
   - component: {fileID: 800691634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13944,7 +14409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801479204}
   - component: {fileID: 801479203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tuberia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14017,7 +14482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802618680}
   - component: {fileID: 802618681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14090,7 +14555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 804346720}
   - component: {fileID: 804346721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14283,7 +14748,7 @@ GameObject:
   - component: {fileID: 820704459}
   - component: {fileID: 820704458}
   - component: {fileID: 820704457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plataformas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14365,12 +14830,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 820704456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.7, y: -15.33, z: 0}
-  m_LocalScale: {x: 3.282589, y: 2.489126, z: 2.8046508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.45885187, y: 0.45885175, z: 0.4588517}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_Father: {fileID: 2043093447}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &820984967
 GameObject:
@@ -14382,7 +14847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820984968}
   - component: {fileID: 820984969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14468,7 +14933,7 @@ Transform:
   - {fileID: 1191228528}
   - {fileID: 1966729302}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &830069404
 GameObject:
@@ -14479,7 +14944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830069406}
   - component: {fileID: 830069405}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14536,12 +15001,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830069404}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 15.3, y: -0.96, z: 0}
-  m_LocalScale: {x: 4.2913547, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.2968378, y: -7.813449, z: 0}
+  m_LocalScale: {x: 1.5093036, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!4 &832038334 stripped
 Transform:
@@ -14556,7 +15021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832754746}
   - component: {fileID: 832754747}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14630,7 +15095,7 @@ GameObject:
   - component: {fileID: 838890042}
   - component: {fileID: 838890044}
   - component: {fileID: 838890043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14729,7 +15194,7 @@ GameObject:
   - component: {fileID: 851119230}
   - component: {fileID: 851119232}
   - component: {fileID: 851119231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14828,7 +15293,7 @@ GameObject:
   - component: {fileID: 851376014}
   - component: {fileID: 851376016}
   - component: {fileID: 851376015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14926,7 +15391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857039458}
   - component: {fileID: 857039457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mesa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14983,12 +15448,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 857039456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.12, y: -21.33, z: 0}
-  m_LocalScale: {x: 0.25527185, y: 0.25527185, z: 0.25527185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.61784405, y: -1.1060551, z: 0}
+  m_LocalScale: {x: 0.0356828, y: 0.047057457, z: 0.04176346}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_Father: {fileID: 2043093447}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857802327
 GameObject:
@@ -14998,7 +15463,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 857802328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tuberia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15020,7 +15485,7 @@ Transform:
   - {fileID: 1689680914}
   - {fileID: 658397040}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866265604
 GameObject:
@@ -15034,7 +15499,7 @@ GameObject:
   - component: {fileID: 866265607}
   - component: {fileID: 866265606}
   - component: {fileID: 866265605}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bisagra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15106,7 +15571,7 @@ Transform:
   m_Children:
   - {fileID: 1271471008}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870241182
 GameObject:
@@ -15118,7 +15583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 870241183}
   - component: {fileID: 870241184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PrototypeWhite04x01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15266,7 +15731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899197046}
   - component: {fileID: 899197047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tragaperras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15344,7 +15809,7 @@ GameObject:
   - component: {fileID: 908834505}
   - component: {fileID: 908834507}
   - component: {fileID: 908834506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15442,7 +15907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909378074}
   - component: {fileID: 909378075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15516,7 +15981,7 @@ GameObject:
   - component: {fileID: 935285315}
   - component: {fileID: 935285317}
   - component: {fileID: 935285316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15697,12 +16162,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937664849}
-  m_LocalRotation: {x: -0, y: -0, z: -0.16937809, w: 0.9855512}
-  m_LocalPosition: {x: 79.11, y: 4.8, z: 0}
-  m_LocalScale: {x: 1.4341469, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.8325359, w: 0.55397105}
+  m_LocalPosition: {x: 9.52518, y: -6.8784523, z: 0}
+  m_LocalScale: {x: 0.5119672, y: 0.9478855, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.503}
 --- !u!1 &938078929
 GameObject:
@@ -15713,7 +16178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938078930}
   - component: {fileID: 938078931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15786,7 +16251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938129304}
   - component: {fileID: 938129305}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15868,7 +16333,7 @@ GameObject:
   - component: {fileID: 960309629}
   - component: {fileID: 960309630}
   - component: {fileID: 960309631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16024,11 +16489,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 967080854}
   m_LocalRotation: {x: -0, y: -0, z: -0.2272024, w: 0.9738476}
-  m_LocalPosition: {x: 91.697, y: -16.336, z: 0}
-  m_LocalScale: {x: 0.09450421, y: 0.05873215, z: 0.13956952}
+  m_LocalPosition: {x: -9.44929, y: 9.680059, z: 0}
+  m_LocalScale: {x: 1.0823462, y: 0.83163667, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.265001}
 --- !u!1 &971105387
 GameObject:
@@ -16040,7 +16505,7 @@ GameObject:
   - component: {fileID: 971105388}
   - component: {fileID: 971105390}
   - component: {fileID: 971105389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16310,7 +16775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975425523}
   - component: {fileID: 975425524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16384,7 +16849,7 @@ GameObject:
   - component: {fileID: 977601436}
   - component: {fileID: 977601438}
   - component: {fileID: 977601437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16482,7 +16947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983108726}
   - component: {fileID: 983108727}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16556,7 +17021,7 @@ GameObject:
   - component: {fileID: 983142429}
   - component: {fileID: 983142431}
   - component: {fileID: 983142430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16709,7 +17174,7 @@ GameObject:
   - component: {fileID: 988750724}
   - component: {fileID: 988750726}
   - component: {fileID: 988750725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16812,7 +17277,7 @@ GameObject:
   - component: {fileID: 997147401}
   - component: {fileID: 997147403}
   - component: {fileID: 997147402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16910,7 +17375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002153725}
   - component: {fileID: 1002153726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16983,7 +17448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002979378}
   - component: {fileID: 1002979379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17129,7 +17594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003859573}
   - component: {fileID: 1003859574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17202,7 +17667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1004189948}
   - component: {fileID: 1004189947}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17259,12 +17724,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1004189946}
-  m_LocalRotation: {x: -0, y: -0, z: -0.42657262, w: 0.9044534}
-  m_LocalPosition: {x: 93.42, y: 9.63, z: 0}
-  m_LocalScale: {x: 2.5834787, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: 0.330482, w: 0.9438123}
+  m_LocalPosition: {x: -0.9940694, y: 19.71728, z: 0}
+  m_LocalScale: {x: 0.9086299, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50.500004}
 --- !u!1 &1012610289
 GameObject:
@@ -17590,7 +18055,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027045137}
   m_LocalRotation: {x: -0, y: -0, z: -0.76336354, w: 0.6459691}
-  m_LocalPosition: {x: -14.5, y: 71.6, z: 0}
+  m_LocalPosition: {x: -8.16, y: 72.6, z: 0}
   m_LocalScale: {x: 0.83784586, y: 0.25805488, z: 1.0000033}
   m_Children: []
   m_Father: {fileID: 351307313}
@@ -17704,7 +18169,7 @@ GameObject:
   - component: {fileID: 1035184611}
   - component: {fileID: 1035184613}
   - component: {fileID: 1035184612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17802,7 +18267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037732446}
   - component: {fileID: 1037732447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17876,7 +18341,7 @@ GameObject:
   - component: {fileID: 1038152965}
   - component: {fileID: 1038152967}
   - component: {fileID: 1038152966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17974,7 +18439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045566961}
   - component: {fileID: 1045566962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18048,7 +18513,7 @@ GameObject:
   - component: {fileID: 1048309790}
   - component: {fileID: 1048309792}
   - component: {fileID: 1048309791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18147,7 +18612,7 @@ GameObject:
   - component: {fileID: 1050661704}
   - component: {fileID: 1050661706}
   - component: {fileID: 1050661705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18337,7 +18802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068549789}
   - component: {fileID: 1068549790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18411,7 +18876,7 @@ GameObject:
   - component: {fileID: 1080970005}
   - component: {fileID: 1080970004}
   - component: {fileID: 1080970003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18722,7 +19187,7 @@ GameObject:
   - component: {fileID: 1092772524}
   - component: {fileID: 1092772526}
   - component: {fileID: 1092772525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18824,7 +19289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1102246239}
   - component: {fileID: 1102246240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18997,7 +19462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1113958648}
   - component: {fileID: 1113958649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19070,7 +19535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116302987}
   - component: {fileID: 1116302988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19143,7 +19608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117237601}
   - component: {fileID: 1117237602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tragaperras (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19274,11 +19739,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118554689}
   m_LocalRotation: {x: -0, y: -0, z: 0.28322732, w: 0.95905286}
-  m_LocalPosition: {x: 100.155, y: -17.002, z: 0}
-  m_LocalScale: {x: 0.09450421, y: 0.05873215, z: 0.13956952}
+  m_LocalPosition: {x: 80.04937, y: -0.33070478, z: 0}
+  m_LocalScale: {x: 1.1241055, y: 0.80568445, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32.906002}
 --- !u!1 &1123053618
 GameObject:
@@ -19393,7 +19858,7 @@ GameObject:
   - component: {fileID: 1127520223}
   - component: {fileID: 1127520225}
   - component: {fileID: 1127520224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19508,7 +19973,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1127710382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68000007, y: 4.16, z: 0}
+  m_LocalPosition: {x: -0.19000006, y: 4.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 149926258}
@@ -19518,7 +19983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.68, y: 4.16}
+  m_AnchoredPosition: {x: -0.19, y: 4.16}
   m_SizeDelta: {x: 7.895, y: 2.291}
   m_Pivot: {x: 0.48113143, y: 0.49999994}
 --- !u!114 &1127710384
@@ -19601,7 +20066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128743107}
   - component: {fileID: 1128743108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19675,7 +20140,7 @@ GameObject:
   - component: {fileID: 1138021201}
   - component: {fileID: 1138021203}
   - component: {fileID: 1138021202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19806,7 +20271,7 @@ GameObject:
   - component: {fileID: 1150757000}
   - component: {fileID: 1150757002}
   - component: {fileID: 1150757001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19978,7 +20443,7 @@ GameObject:
   - component: {fileID: 1153751541}
   - component: {fileID: 1153751543}
   - component: {fileID: 1153751542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20077,7 +20542,7 @@ GameObject:
   - component: {fileID: 1163277170}
   - component: {fileID: 1163277172}
   - component: {fileID: 1163277171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20176,7 +20641,7 @@ GameObject:
   - component: {fileID: 1163962215}
   - component: {fileID: 1163962217}
   - component: {fileID: 1163962216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20324,7 +20789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1170238108}
   - component: {fileID: 1170238109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20397,7 +20862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187224577}
   - component: {fileID: 1187224578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20470,7 +20935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1189485851}
   - component: {fileID: 1189485852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20612,7 +21077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200591138}
   - component: {fileID: 1200591139}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20706,7 +21171,7 @@ Transform:
   - {fileID: 1103877455}
   - {fileID: 1884684583}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1204563194 stripped
 Transform:
@@ -20722,7 +21187,7 @@ GameObject:
   - component: {fileID: 1209767782}
   - component: {fileID: 1209767783}
   - component: {fileID: 1209767784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20824,11 +21289,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4240130364420266, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.71
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 4240130364420266, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.99
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4240130364420266, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -20852,7 +21317,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4240130364420266, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4240130364420266, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
       propertyPath: m_LocalScale.x
@@ -20905,21 +21370,38 @@ Prefab:
       propertyPath: m_Size.x
       value: 7.4569845
       objectReference: {fileID: 0}
-    - target: {fileID: 212129018320753470, guid: 6ef44cf4fa91fdd4b8c911caa33edebb,
+    - target: {fileID: 70605143844184756, guid: 6ef44cf4fa91fdd4b8c911caa33edebb,
         type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212129018320753470, guid: 6ef44cf4fa91fdd4b8c911caa33edebb,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5335fe3ab515550458ef943e12a3e5d9,
-        type: 3}
-    - target: {fileID: 114707041309210976, guid: 6ef44cf4fa91fdd4b8c911caa33edebb,
-        type: 2}
-      propertyPath: dmg
-      value: 5
+    - target: {fileID: 1681591793109702, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007157924598774, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502387668683436, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510329997702348, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007157924598774, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_Name
+      value: caleyaplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510329997702348, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681591793109702, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ef44cf4fa91fdd4b8c911caa33edebb, type: 2}
@@ -21033,7 +21515,7 @@ GameObject:
   - component: {fileID: 1223311627}
   - component: {fileID: 1223311629}
   - component: {fileID: 1223311628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21131,7 +21613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228613516}
   - component: {fileID: 1228613517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21204,7 +21686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236735566}
   - component: {fileID: 1236735567}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rejas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21277,7 +21759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242039236}
   - component: {fileID: 1242039237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21416,7 +21898,7 @@ GameObject:
   - component: {fileID: 1246451390}
   - component: {fileID: 1246451392}
   - component: {fileID: 1246451391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21515,7 +21997,7 @@ GameObject:
   - component: {fileID: 1252441306}
   - component: {fileID: 1252441308}
   - component: {fileID: 1252441307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21614,7 +22096,7 @@ GameObject:
   - component: {fileID: 1253253811}
   - component: {fileID: 1253253813}
   - component: {fileID: 1253253812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21713,7 +22195,7 @@ GameObject:
   - component: {fileID: 1257547179}
   - component: {fileID: 1257547181}
   - component: {fileID: 1257547180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_22 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21811,7 +22293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264549980}
   - component: {fileID: 1264549981}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21972,7 +22454,7 @@ Transform:
   m_LocalScale: {x: 0.7168896, y: 0.7168896, z: 0.7168896}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1271471007
 GameObject:
@@ -21983,7 +22465,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1271471008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22093,7 +22575,7 @@ GameObject:
   - component: {fileID: 1274137395}
   - component: {fileID: 1274137396}
   - component: {fileID: 1274137397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22192,7 +22674,7 @@ GameObject:
   - component: {fileID: 1283833082}
   - component: {fileID: 1283833084}
   - component: {fileID: 1283833083}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22291,7 +22773,7 @@ GameObject:
   - component: {fileID: 1284703626}
   - component: {fileID: 1284703628}
   - component: {fileID: 1284703627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22389,7 +22871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285194022}
   - component: {fileID: 1285194023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22463,7 +22945,7 @@ GameObject:
   - component: {fileID: 1291672987}
   - component: {fileID: 1291672989}
   - component: {fileID: 1291672988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22561,7 +23043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293117321}
   - component: {fileID: 1293117322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22634,7 +23116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293566476}
   - component: {fileID: 1293566477}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22708,7 +23190,7 @@ GameObject:
   - component: {fileID: 1294693213}
   - component: {fileID: 1294693215}
   - component: {fileID: 1294693214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22806,7 +23288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299143778}
   - component: {fileID: 1299143779}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22880,7 +23362,7 @@ GameObject:
   - component: {fileID: 1299254494}
   - component: {fileID: 1299254496}
   - component: {fileID: 1299254495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22999,6 +23481,44 @@ Transform:
   m_Father: {fileID: 709640300}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1305563508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1305563509}
+  m_Layer: 8
+  m_Name: SUELOPS_ELEVADOS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1305563509
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305563508}
+  m_LocalRotation: {x: -0, y: -0, z: -0.91433734, w: 0.40495348}
+  m_LocalPosition: {x: 110.13, y: 9.88, z: 0}
+  m_LocalScale: {x: 2.5834804, y: 2.8432693, z: 2.8432674}
+  m_Children:
+  - {fileID: 937664852}
+  - {fileID: 1607092399}
+  - {fileID: 2019801292}
+  - {fileID: 1433258255}
+  - {fileID: 145863141}
+  - {fileID: 318973361}
+  - {fileID: 1864948698}
+  - {fileID: 617775518}
+  - {fileID: 2078537714}
+  - {fileID: 709514818}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306315605
 GameObject:
   m_ObjectHideFlags: 0
@@ -23009,7 +23529,7 @@ GameObject:
   - component: {fileID: 1306315606}
   - component: {fileID: 1306315608}
   - component: {fileID: 1306315607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23238,11 +23758,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1309339659}
   m_LocalRotation: {x: -0, y: -0, z: 0.0050976207, w: 0.99998707}
-  m_LocalPosition: {x: 92.863, y: -16.085, z: 0}
-  m_LocalScale: {x: 0.09450421, y: 0.082943, z: 0.13956952}
+  m_LocalPosition: {x: 2.888788, y: 13.452904, z: 0}
+  m_LocalScale: {x: 1.0000437, y: 1.2466917, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.58400005}
 --- !u!4 &1310619396 stripped
 Transform:
@@ -23258,7 +23778,7 @@ GameObject:
   - component: {fileID: 1322670983}
   - component: {fileID: 1322670985}
   - component: {fileID: 1322670984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23429,7 +23949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330452344}
   - component: {fileID: 1330452345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23503,7 +24023,7 @@ GameObject:
   - component: {fileID: 1330840380}
   - component: {fileID: 1330840382}
   - component: {fileID: 1330840381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23853,7 +24373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341199876}
   - component: {fileID: 1341199877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23927,7 +24447,7 @@ GameObject:
   - component: {fileID: 1343002975}
   - component: {fileID: 1343002977}
   - component: {fileID: 1343002976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24033,7 +24553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351277937}
   - component: {fileID: 1351277938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24107,7 +24627,7 @@ GameObject:
   - component: {fileID: 1358232935}
   - component: {fileID: 1358232937}
   - component: {fileID: 1358232936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24209,7 +24729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360994526}
   - component: {fileID: 1360994527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24327,6 +24847,105 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba4eef1c1bb56b444b143beb8d3e30d5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1372025590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1372025591}
+  - component: {fileID: 1372025593}
+  - component: {fileID: 1372025592}
+  m_Layer: 9
+  m_Name: Doner Kebab doner kebab (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1372025591
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372025590}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70151, w: 0.71265966}
+  m_LocalPosition: {x: 3.1458967, y: -0.14458321, z: 0}
+  m_LocalScale: {x: 0.16179271, y: 0.16179271, z: 0.16179277}
+  m_Children: []
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1372025592
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372025590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.35, y: 2.7}
+    newSize: {x: 4.35, y: 2.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.35, y: 2.7}
+  m_EdgeRadius: 0
+--- !u!212 &1372025593
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372025590}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: de366366846ca334286c5088ec3acd76, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.35, y: 2.7}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1372973377
 GameObject:
   m_ObjectHideFlags: 0
@@ -24426,7 +25045,7 @@ Transform:
   - {fileID: 500496723}
   - {fileID: 1688554276}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1373304378
 Prefab:
@@ -24510,7 +25129,7 @@ Transform:
   - {fileID: 1600965144}
   - {fileID: 1679624131}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1374179610
 Prefab:
@@ -24583,7 +25202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385348284}
   - component: {fileID: 1385348285}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24756,7 +25375,7 @@ GameObject:
   - component: {fileID: 1397634448}
   - component: {fileID: 1397634450}
   - component: {fileID: 1397634449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24970,7 +25589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408676469}
   - component: {fileID: 1408676470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25109,7 +25728,7 @@ Transform:
   m_LocalScale: {x: 6.498453, y: 6.498453, z: 6.498453}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428551434
 GameObject:
@@ -25219,7 +25838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430904649}
   - component: {fileID: 1430904650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25375,13 +25994,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1433258252}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2326665, w: 0.9725566}
-  m_LocalPosition: {x: 81.77, y: 9.68, z: 0}
-  m_LocalScale: {x: 1.4341469, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.98625815, w: 0.16521202}
+  m_LocalPosition: {x: 7.434449, y: -7.339077, z: 0}
+  m_LocalScale: {x: 0.5486861, y: 0.8843207, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 47
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.908}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 160.981}
 --- !u!4 &1439849577 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 0ce4cbc241d3aca4da0b94a0ffa0d51f, type: 2}
@@ -25395,7 +26014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441154484}
   - component: {fileID: 1441154483}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25452,12 +26071,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1441154482}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 37.53, y: -1.9, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.750679, y: -0.0011679141, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &1449753610
 GameObject:
@@ -25468,7 +26087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449753611}
   - component: {fileID: 1449753612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25542,7 +26161,7 @@ GameObject:
   - component: {fileID: 1449811179}
   - component: {fileID: 1449811181}
   - component: {fileID: 1449811180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25640,7 +26259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451658802}
   - component: {fileID: 1451658803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25771,7 +26390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468933222}
   - component: {fileID: 1468933223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25957,7 +26576,7 @@ GameObject:
   - component: {fileID: 1483555483}
   - component: {fileID: 1483555485}
   - component: {fileID: 1483555484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26056,7 +26675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487699048}
   - component: {fileID: 1487699049}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26113,7 +26732,7 @@ GameObject:
   - component: {fileID: 1492691365}
   - component: {fileID: 1492691367}
   - component: {fileID: 1492691366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26212,7 +26831,7 @@ GameObject:
   - component: {fileID: 1494758780}
   - component: {fileID: 1494758782}
   - component: {fileID: 1494758781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26476,7 +27095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517384413}
   - component: {fileID: 1517384412}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26533,12 +27152,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1517384411}
-  m_LocalRotation: {x: -0, y: -0, z: -0.91433734, w: 0.40495348}
-  m_LocalPosition: {x: 110.13, y: 9.88, z: 0}
-  m_LocalScale: {x: 2.5834787, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3675324, w: 0.9300108}
+  m_LocalPosition: {x: -0.9893198, y: 25.594976, z: 0}
+  m_LocalScale: {x: 0.9086302, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -132.224}
 --- !u!4 &1522428410 stripped
 Transform:
@@ -26608,7 +27227,7 @@ GameObject:
   - component: {fileID: 1539985398}
   - component: {fileID: 1539985400}
   - component: {fileID: 1539985399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26706,7 +27325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543008497}
   - component: {fileID: 1543008498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26779,7 +27398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548352023}
   - component: {fileID: 1548352024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26853,7 +27472,7 @@ GameObject:
   - component: {fileID: 1553247083}
   - component: {fileID: 1553247085}
   - component: {fileID: 1553247084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27055,7 +27674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1581329125}
   - component: {fileID: 1581329126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27128,7 +27747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582224907}
   - component: {fileID: 1582224906}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27185,12 +27804,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1582224905}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 15.220005, y: 3.9899998, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5556568, y: -7.8141303, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &1583931858
 GameObject:
@@ -27202,7 +27821,7 @@ GameObject:
   - component: {fileID: 1583931859}
   - component: {fileID: 1583931861}
   - component: {fileID: 1583931860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27324,7 +27943,7 @@ Transform:
   - {fileID: 1153340833}
   - {fileID: 645352715}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592267414
 GameObject:
@@ -27336,7 +27955,7 @@ GameObject:
   - component: {fileID: 1592267415}
   - component: {fileID: 1592267417}
   - component: {fileID: 1592267416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27425,6 +28044,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1594841484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1594841485}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594841485
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594841484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79, y: 2.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 55868547}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1600965144 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a038b284634e29f4aaf058814aa61a6f, type: 2}
@@ -27438,7 +28085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601166131}
   - component: {fileID: 1601166132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27594,13 +28241,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607092396}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2326665, w: 0.9725566}
-  m_LocalPosition: {x: 83.55, y: 10.58, z: 0}
-  m_LocalScale: {x: 1.4341469, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9872867, w: 0.1589497}
+  m_LocalPosition: {x: 6.71345, y: -7.0881963, z: 0}
+  m_LocalScale: {x: 0.5486861, y: 0.8843207, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 45
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 26.908}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 161.70801}
 --- !u!1 &1610827401
 GameObject:
   m_ObjectHideFlags: 0
@@ -27611,7 +28258,7 @@ GameObject:
   - component: {fileID: 1610827402}
   - component: {fileID: 1610827404}
   - component: {fileID: 1610827403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27767,7 +28414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622968352}
   - component: {fileID: 1622968353}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27967,7 +28614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1631723032}
   - component: {fileID: 1631723033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28046,7 +28693,7 @@ GameObject:
   - component: {fileID: 1641959776}
   - component: {fileID: 1641959775}
   - component: {fileID: 1641959774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28145,7 +28792,7 @@ GameObject:
   - component: {fileID: 1653631503}
   - component: {fileID: 1653631502}
   - component: {fileID: 1653631501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28242,7 +28889,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1659080917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alcantarilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28341,7 +28988,7 @@ Transform:
   - {fileID: 1845322950}
   - {fileID: 2108468295}
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664779904
 GameObject:
@@ -28352,7 +28999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1664779906}
   - component: {fileID: 1664779905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ciudad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28426,7 +29073,7 @@ GameObject:
   - component: {fileID: 1665144400}
   - component: {fileID: 1665144402}
   - component: {fileID: 1665144401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28524,7 +29171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667078178}
   - component: {fileID: 1667078179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28671,7 +29318,7 @@ GameObject:
   - component: {fileID: 1673497605}
   - component: {fileID: 1673497607}
   - component: {fileID: 1673497606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28830,13 +29477,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1680135184}
-  m_LocalRotation: {x: -0, y: -0, z: -0.30394277, w: 0.9526903}
-  m_LocalPosition: {x: 83.634, y: -5.163, z: 0}
-  m_LocalScale: {x: 0.11527483, y: 0.05629286, z: 0.05629286}
+  m_LocalRotation: {x: -0, y: -0, z: -0.40156832, w: 0.91582906}
+  m_LocalPosition: {x: -89, y: 171.9, z: 0}
+  m_LocalScale: {x: 1.3918158, y: 0.76213884, z: 0.40333205}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 58
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35.389}
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.352}
 --- !u!1 &1680374783
 GameObject:
   m_ObjectHideFlags: 0
@@ -28928,7 +29575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689680914}
   - component: {fileID: 1689680913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tuberia_fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29001,7 +29648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690071445}
   - component: {fileID: 1690071446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29191,7 +29838,7 @@ GameObject:
   - component: {fileID: 1731353485}
   - component: {fileID: 1731353487}
   - component: {fileID: 1731353486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29354,7 +30001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736917330}
   - component: {fileID: 1736917331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29427,7 +30074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739066562}
   - component: {fileID: 1739066561}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29484,12 +30131,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739066560}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 94.57, y: 5.71, z: 0}
-  m_LocalScale: {x: 2.044586, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.390831, y: 20.099958, z: 0}
+  m_LocalScale: {x: 0.7190972, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &1741246398
 GameObject:
@@ -29500,7 +30147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741246399}
   - component: {fileID: 1741246400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29573,7 +30220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747086720}
   - component: {fileID: 1747086721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29647,7 +30294,7 @@ GameObject:
   - component: {fileID: 1747582909}
   - component: {fileID: 1747582910}
   - component: {fileID: 1747582911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29746,7 +30393,7 @@ GameObject:
   - component: {fileID: 1750719971}
   - component: {fileID: 1750719973}
   - component: {fileID: 1750719972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29899,7 +30546,7 @@ GameObject:
   - component: {fileID: 1755580448}
   - component: {fileID: 1755580450}
   - component: {fileID: 1755580449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30162,7 +30809,7 @@ GameObject:
   - component: {fileID: 1760169399}
   - component: {fileID: 1760169398}
   - component: {fileID: 1760169397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30360,7 +31007,7 @@ GameObject:
   - component: {fileID: 1763000017}
   - component: {fileID: 1763000019}
   - component: {fileID: 1763000018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30536,7 +31183,7 @@ GameObject:
   - component: {fileID: 1770776387}
   - component: {fileID: 1770776389}
   - component: {fileID: 1770776388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30699,7 +31346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785520882}
   - component: {fileID: 1785520881}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30756,12 +31403,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1785520880}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 108.9, y: 5.94, z: 0}
-  m_LocalScale: {x: 2.044586, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.38941604, y: 25.14058, z: 0}
+  m_LocalScale: {x: 0.7190972, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &1789111313
 GameObject:
@@ -30930,7 +31577,7 @@ GameObject:
   - component: {fileID: 1790736205}
   - component: {fileID: 1790736204}
   - component: {fileID: 1790736203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plataformas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31012,12 +31659,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790736202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.24, y: -18.61, z: 0}
-  m_LocalScale: {x: 1.805424, y: 2.5943024, z: 2.8046508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7744009, y: -0.6046436, z: 0}
+  m_LocalScale: {x: 0.25236854, y: 0.47824025, z: 0.4588517}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_Father: {fileID: 2043093447}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791241220
 GameObject:
@@ -31028,7 +31675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791241222}
   - component: {fileID: 1791241221}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31085,12 +31732,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791241220}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 108.840004, y: 9.339999, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8065745, y: 25.138336, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &1798612153
 GameObject:
@@ -31101,7 +31748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798612154}
   - component: {fileID: 1798612155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31174,7 +31821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801584284}
   - component: {fileID: 1801584285}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31252,7 +31899,7 @@ GameObject:
   - component: {fileID: 1809934991}
   - component: {fileID: 1809934993}
   - component: {fileID: 1809934992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31408,7 +32055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819048416}
   - component: {fileID: 1819048417}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31481,7 +32128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820543131}
   - component: {fileID: 1820543132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31554,7 +32201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820836299}
   - component: {fileID: 1820836300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31690,7 +32337,7 @@ GameObject:
   - component: {fileID: 1834521908}
   - component: {fileID: 1834521910}
   - component: {fileID: 1834521909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31846,12 +32493,40 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837080071}
   m_LocalRotation: {x: -0, y: -0, z: -0.38230258, w: 0.9240372}
-  m_LocalPosition: {x: 92.59, y: -16.98, z: 0}
-  m_LocalScale: {x: 0.09450421, y: 0.06652842, z: 0.13956952}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2099078, y: 0.85223055, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.953003}
+--- !u!1 &1839675004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1839675005}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1839675005
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839675004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.79, y: -2.63, z: 0}
+  m_LocalScale: {x: 0.9999997, y: 0.9999997, z: 0.9999997}
+  m_Children: []
+  m_Father: {fileID: 55868547}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841533817
 GameObject:
   m_ObjectHideFlags: 0
@@ -31919,11 +32594,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1841533817}
   m_LocalRotation: {x: -0, y: -0, z: 0.0000757703, w: 1}
-  m_LocalPosition: {x: 98.46, y: -8.59, z: 0}
-  m_LocalScale: {x: 0.11527483, y: 0.013067632, z: 0.05629286}
+  m_LocalPosition: {x: 62.113663, y: 126.1115, z: 0}
+  m_LocalScale: {x: 1.2197851, y: 0.1964218, z: 0.40333205}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.009000001}
 --- !u!1 &1842093570
 GameObject:
@@ -31935,7 +32610,7 @@ GameObject:
   - component: {fileID: 1842093571}
   - component: {fileID: 1842093573}
   - component: {fileID: 1842093572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32033,7 +32708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842444202}
   - component: {fileID: 1842444203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32111,7 +32786,7 @@ GameObject:
   - component: {fileID: 1843079834}
   - component: {fileID: 1843079836}
   - component: {fileID: 1843079835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (87)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32351,7 +33026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845322950}
   - component: {fileID: 1845322951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32441,13 +33116,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855937146}
-  m_LocalRotation: {x: -0, y: -0, z: -0.59040004, w: 0.8071108}
-  m_LocalPosition: {x: -10.35, y: 67.4, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.77651703, w: 0.63009626}
+  m_LocalPosition: {x: -10.35, y: 60.2, z: 0}
   m_LocalScale: {x: 0.84979326, y: 0.2617355, z: 1.0000033}
   m_Children: []
   m_Father: {fileID: 351307313}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -72.371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -101.886}
 --- !u!212 &1855937148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32571,7 +33246,7 @@ GameObject:
   - component: {fileID: 1862000366}
   - component: {fileID: 1862000368}
   - component: {fileID: 1862000367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32669,7 +33344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863807580}
   - component: {fileID: 1863807581}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32825,13 +33500,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864948695}
-  m_LocalRotation: {x: -0, y: -0, z: 0.27746224, w: 0.9607366}
-  m_LocalPosition: {x: 47.893, y: 4.87, z: 0}
-  m_LocalScale: {x: 1.7266605, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9924605, w: 0.12256527}
+  m_LocalPosition: {x: 17.625408, y: -15.025451, z: 0}
+  m_LocalScale: {x: 0.66395354, y: 0.8794963, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32.218002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.92001}
 --- !u!1 &1869715795
 GameObject:
   m_ObjectHideFlags: 0
@@ -32842,7 +33517,7 @@ GameObject:
   - component: {fileID: 1869715796}
   - component: {fileID: 1869715798}
   - component: {fileID: 1869715797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33148,7 +33823,7 @@ GameObject:
   - component: {fileID: 1886005119}
   - component: {fileID: 1886005121}
   - component: {fileID: 1886005120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33246,7 +33921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888016264}
   - component: {fileID: 1888016265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33500,7 +34175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896340336}
   - component: {fileID: 1896340337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33574,7 +34249,7 @@ GameObject:
   - component: {fileID: 1900932782}
   - component: {fileID: 1900932784}
   - component: {fileID: 1900932783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33673,7 +34348,7 @@ GameObject:
   - component: {fileID: 1902396388}
   - component: {fileID: 1902396390}
   - component: {fileID: 1902396389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33770,7 +34445,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1904390044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rejas_todas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33792,7 +34467,7 @@ Transform:
   - {fileID: 1955077765}
   - {fileID: 557767279}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906335365
 GameObject:
@@ -33804,7 +34479,7 @@ GameObject:
   - component: {fileID: 1906335366}
   - component: {fileID: 1906335368}
   - component: {fileID: 1906335367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33902,7 +34577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914172979}
   - component: {fileID: 1914172978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: atacar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34029,7 +34704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921632013}
   - component: {fileID: 1921632014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34103,7 +34778,7 @@ GameObject:
   - component: {fileID: 1922613897}
   - component: {fileID: 1922613899}
   - component: {fileID: 1922613898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34202,7 +34877,7 @@ GameObject:
   - component: {fileID: 1925986502}
   - component: {fileID: 1925986504}
   - component: {fileID: 1925986503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34300,7 +34975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1926653437}
   - component: {fileID: 1926653438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34374,7 +35049,7 @@ GameObject:
   - component: {fileID: 1934738030}
   - component: {fileID: 1934738032}
   - component: {fileID: 1934738031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34472,7 +35147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939253189}
   - component: {fileID: 1939253190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34549,7 +35224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946106912}
   - component: {fileID: 1946106913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34623,7 +35298,7 @@ GameObject:
   - component: {fileID: 1953447310}
   - component: {fileID: 1953447312}
   - component: {fileID: 1953447311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34721,7 +35396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955077765}
   - component: {fileID: 1955077766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rejas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34795,7 +35470,7 @@ GameObject:
   - component: {fileID: 1961076741}
   - component: {fileID: 1961076743}
   - component: {fileID: 1961076742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34893,7 +35568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964841966}
   - component: {fileID: 1964841967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35031,7 +35706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972899458}
   - component: {fileID: 1972899459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35178,7 +35853,7 @@ GameObject:
   - component: {fileID: 1976396309}
   - component: {fileID: 1976396308}
   - component: {fileID: 1976396307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35342,7 +36017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998531856}
   - component: {fileID: 1998531857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35474,7 +36149,7 @@ GameObject:
   - component: {fileID: 2004525570}
   - component: {fileID: 2004525572}
   - component: {fileID: 2004525571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35576,7 +36251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012274874}
   - component: {fileID: 2012274875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35711,11 +36386,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2017587991}
   m_LocalRotation: {x: -0, y: -0, z: -0.3902676, w: 0.92070156}
-  m_LocalPosition: {x: 115.21, y: -16.79, z: 0}
-  m_LocalScale: {x: 0.038514953, y: 0.026340052, z: 0.018808242}
+  m_LocalPosition: {x: 239.35445, y: 2.8559017, z: 0}
+  m_LocalScale: {x: 0.49605423, y: 0.33539283, z: 0.13475895}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.942}
 --- !u!1 &2018565856
 GameObject:
@@ -35726,7 +36401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018565857}
   - component: {fileID: 2018565858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35882,13 +36557,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2019801289}
-  m_LocalRotation: {x: -0, y: -0, z: 0.27059117, w: 0.96269435}
-  m_LocalPosition: {x: 65.03, y: 3.65, z: 0}
-  m_LocalScale: {x: 1.4341469, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.99145854, w: 0.13042238}
+  m_LocalPosition: {x: 13.519, y: -10.268, z: 0}
+  m_LocalScale: {x: 0.55108964, y: 0.88015974, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 46
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.399002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.01201}
 --- !u!4 &2020797139 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 0ce4cbc241d3aca4da0b94a0ffa0d51f, type: 2}
@@ -35903,7 +36578,7 @@ GameObject:
   - component: {fileID: 2022258173}
   - component: {fileID: 2022258175}
   - component: {fileID: 2022258174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_22 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36066,7 +36741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029093095}
   - component: {fileID: 2029093094}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36123,12 +36798,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2029093093}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 37.47, y: 1.98, z: 0}
-  m_LocalScale: {x: 2.8432674, y: 2.8432674, z: 2.8432674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3858893, y: -0.00075032277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &2029555076
 GameObject:
@@ -36212,7 +36887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030204716}
   - component: {fileID: 2030204715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tuberia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36280,6 +36955,77 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ba4eef1c1bb56b444b143beb8d3e30d5, type: 2}
   m_PrefabInternal: {fileID: 1517199491}
+--- !u!1 &2042267519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2042267520}
+  m_Layer: 0
+  m_Name: NEGROS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042267520
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042267519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 92.59, y: -16.98, z: 0}
+  m_LocalScale: {x: 0.09450421, y: 0.06652842, z: 0.13956952}
+  m_Children:
+  - {fileID: 351307313}
+  - {fileID: 423879384}
+  - {fileID: 1837080073}
+  - {fileID: 967080856}
+  - {fileID: 1309339661}
+  - {fileID: 206315976}
+  - {fileID: 2112175450}
+  - {fileID: 2017587993}
+  - {fileID: 1680135186}
+  - {fileID: 1841533819}
+  - {fileID: 602200233}
+  - {fileID: 1118554691}
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2043093446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2043093447}
+  m_Layer: 8
+  m_Name: PLATAFORMAS/casino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043093447
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043093446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.7, y: -15.33, z: 0}
+  m_LocalScale: {x: 7.153919, y: 5.4246845, z: 6.1123247}
+  m_Children:
+  - {fileID: 820704459}
+  - {fileID: 1790736205}
+  - {fileID: 857039458}
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047174786
 GameObject:
   m_ObjectHideFlags: 0
@@ -36290,7 +37036,7 @@ GameObject:
   - component: {fileID: 2047174787}
   - component: {fileID: 2047174789}
   - component: {fileID: 2047174788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_casino (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36388,7 +37134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048037633}
   - component: {fileID: 2048037634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36494,7 +37240,7 @@ Transform:
   - {fileID: 1756040890}
   - {fileID: 1338164614}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056770806
 GameObject:
@@ -36624,7 +37370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2058695306}
   - component: {fileID: 2058695307}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36698,7 +37444,7 @@ GameObject:
   - component: {fileID: 2059063846}
   - component: {fileID: 2059063848}
   - component: {fileID: 2059063847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36796,7 +37542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065213512}
   - component: {fileID: 2065213513}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36870,7 +37616,7 @@ GameObject:
   - component: {fileID: 2071276571}
   - component: {fileID: 2071276573}
   - component: {fileID: 2071276572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (86)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36973,7 +37719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2075071418}
   - component: {fileID: 2075071419}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37112,13 +37858,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2078537711}
-  m_LocalRotation: {x: -0, y: -0, z: 0.23633765, w: 0.971671}
-  m_LocalPosition: {x: 35.03, y: 1.67, z: 0}
-  m_LocalScale: {x: 2.2964816, y: 2.4826822, z: 2.4826822}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9862579, w: 0.165213}
+  m_LocalPosition: {x: 21.888634, y: -17.61927, z: 0}
+  m_LocalScale: {x: 0.8790092, y: 0.883883, z: 0.87317926}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27.341002}
+  m_Father: {fileID: 1305563509}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 160.981}
 --- !u!1 &2078601471
 GameObject:
   m_ObjectHideFlags: 0
@@ -37351,7 +38097,7 @@ GameObject:
   - component: {fileID: 2090013113}
   - component: {fileID: 2090013112}
   - component: {fileID: 2090013111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: su_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37450,7 +38196,7 @@ GameObject:
   - component: {fileID: 2094186390}
   - component: {fileID: 2094186392}
   - component: {fileID: 2094186391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sulat_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37598,7 +38344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098883004}
   - component: {fileID: 2098883005}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pared_casino (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37725,7 +38471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108468295}
   - component: {fileID: 2108468296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fondo_alc (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37826,7 +38572,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4771185119503016, guid: a49524c5644cd9547ac5d5a581a3b121, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a49524c5644cd9547ac5d5a581a3b121, type: 2}
@@ -37898,11 +38644,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2112175448}
   m_LocalRotation: {x: -0, y: -0, z: -0.15524818, w: 0.9878755}
-  m_LocalPosition: {x: 102.86, y: -22.81, z: 0}
-  m_LocalScale: {x: 0.21243301, y: 0.13956952, z: 0.13956952}
+  m_LocalPosition: {x: 108.672455, y: -87.63172, z: 0}
+  m_LocalScale: {x: 2.3368015, y: 2.0394635, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_Father: {fileID: 2042267520}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.862001}
 --- !u!1 &2112773276
 GameObject:
@@ -37983,7 +38729,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2112773281
 MonoBehaviour:
@@ -38011,7 +38757,7 @@ GameObject:
   - component: {fileID: 2113079589}
   - component: {fileID: 2113079590}
   - component: {fileID: 2113079591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: techo_casino (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38110,7 +38856,7 @@ GameObject:
   - component: {fileID: 2118222414}
   - component: {fileID: 2118222416}
   - component: {fileID: 2118222415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38373,7 +39119,7 @@ GameObject:
   - component: {fileID: 2125770565}
   - component: {fileID: 2125770567}
   - component: {fileID: 2125770566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38525,7 +39271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130375558}
   - component: {fileID: 2130375557}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: viga (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38582,12 +39328,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2130375556}
-  m_LocalRotation: {x: -0, y: -0, z: -0.70151, w: 0.71265966}
-  m_LocalPosition: {x: 34.47, y: -2.64, z: 0}
-  m_LocalScale: {x: 1.9577315, y: 1.9577312, z: 1.9577312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.993941, y: -1.0813631, z: 0}
+  m_LocalScale: {x: 0.68854976, y: 0.6885497, z: 0.6885498}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 175012213}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.09701}
 --- !u!1 &2130633254
 GameObject:
@@ -38599,7 +39345,7 @@ GameObject:
   - component: {fileID: 2130633255}
   - component: {fileID: 2130633257}
   - component: {fileID: 2130633256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: suelo_alc (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38704,7 +39450,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2136412669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Suelos_1floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38756,7 +39502,7 @@ Transform:
   - {fileID: 739909196}
   - {fileID: 515867268}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2139820633 stripped
 Transform:
@@ -38770,7 +39516,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2142312751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: casino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38840,7 +39586,7 @@ Transform:
   - {fileID: 804346720}
   - {fileID: 2048037633}
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2143625865
 Prefab:
