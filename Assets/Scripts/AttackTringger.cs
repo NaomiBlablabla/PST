@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackTringger : MonoBehaviour {
 
     [SerializeField]
-    private int dmg = 20;
+    private int dmg = 5;
 
 
     void OnTriggerEnter2D(Collider2D col)

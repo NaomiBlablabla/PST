@@ -30,6 +30,22 @@ public class PlayerAttack : MonoBehaviour {
             attackTrigger.enabled = true;
         }
 
+        if (Input.GetButtonDown("UpKick") && !attacking)
+        {
+            attacking = true;
+            attackTimer = attackCd;
+
+            attackTrigger.enabled = true;
+        }
+
+        if (Input.GetButtonDown("Grab") && !attacking)
+        {
+            attacking = true;
+            attackTimer = attackCd;
+
+            attackTrigger.enabled = true;
+        }
+
         if (attacking)
         {
             if(attackTimer > 0)
