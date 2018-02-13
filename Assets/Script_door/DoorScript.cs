@@ -52,11 +52,13 @@ public class DoorScript : MonoBehaviour
             {
                 if (doorKey)
                 {
-                    GUI.Box(new Rect(0, 0, 200, 25), "Presiona la tecla E para abrir");
+                    GUI.Box(new Rect(820, 400, 300, 65), "Presiona la tecla E para abrir");
+                    GUI.skin.box.fontSize = 25;
                 }
                 else
                 {
-                    GUI.Box(new Rect(0, 0, 200, 25), "¡Necesitas una llave!");
+                    GUI.Box(new Rect(820, 400, 300, 65), "¡Necesitas una llave!");
+                    GUI.skin.box.fontSize = 25;
                 }
             }
         }

@@ -28,6 +28,7 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
     //Caching 
     private Seeker seeker;
     private Rigidbody2D rb;
+    private Animator anim;
 
     //calculador de ruta
 
@@ -46,6 +47,8 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
 
     //the waypoint we are currently moving towards
     private int currentWaypoint = 0;
+    
+    
 
     // Use this for initialization
 
@@ -60,6 +63,7 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
         //Pathfinding
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         if (target == null)
         {
@@ -108,7 +112,10 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
         if (target == null)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+
+            anim.SetTrigger("Enemy_walk");
         }
+        anim.SetTrigger("Enemy_ide");
 
 
 
