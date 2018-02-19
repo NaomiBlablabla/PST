@@ -13,7 +13,7 @@ public class MainMenuController : MonoBehaviour {
 
     public void OnStart_Click()
     {
-        SceneManager.LoadScene("main menu");
+        SceneManager.LoadScene("main_menu_1");
     }
 
 	public void OnExit_Click()
