@@ -57,15 +57,20 @@ namespace UnityStandardAssets._2D
             }
 
 
-            // pulsar 'q' para dar un doble puñetazo 
-            if (Input.GetButtonDown("Punch"))
+            // pulsar 'r' para dar un puñetazo 
+            if (Input.GetButtonDown("Punch1"))
             {
-                Anim.SetTrigger("Punch");
+                Anim.SetTrigger("Punch1");
             }
 
+            // pulsar 't' para dar un puñetazo forma 2
+            if (Input.GetButtonDown("Punch2"))
+            {
+                Anim.SetTrigger("Punch2");
+            }
             //if (mov != Vector2.zero) attackCollider.offset = new Vector2(mov.x /2, mov.y);
 
-           
+
         }
 
         private void FixedUpdate()
