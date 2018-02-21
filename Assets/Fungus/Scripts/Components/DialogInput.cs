@@ -14,9 +14,9 @@ namespace Fungus
         /// <summary> Clicking disabled. </summary>
         Disabled,
         /// <summary> Click anywhere on screen to advance. </summary>
-        ClickAnywhere,
+        //ClickAnywhere,
         /// <summary> Click anywhere on Say Dialog to advance. </summary>
-        ClickOnDialog,
+        //ClickOnDialog,
         /// <summary> Click on continue button to advance. </summary>
         ClickOnButton
     }
@@ -97,19 +97,19 @@ namespace Fungus
             {
             case ClickMode.Disabled:
                 break;
-            case ClickMode.ClickAnywhere:
+            /*case ClickMode.ClickAnywhere:
                 if (Input.GetMouseButtonDown(0))
                 {
                     SetNextLineFlag();
                 }
-                break;
-            case ClickMode.ClickOnDialog:
+                break;*/
+            /*case ClickMode.ClickOnDialog:
                 if (dialogClickedFlag)
                 {
                     SetNextLineFlag();
                     dialogClickedFlag = false;
                 }
-                break;
+                break;*/
             }
 
             if (ignoreClickTimer > 0f)
@@ -165,10 +165,11 @@ namespace Fungus
             ignoreClickTimer = nextClickDelay;
 
             // Only applies in Click On Dialog mode
+            /*
             if (clickMode == ClickMode.ClickOnDialog)
             {
                 dialogClickedFlag = true;
-            }
+            }*/
         }
 
         /// <summary>

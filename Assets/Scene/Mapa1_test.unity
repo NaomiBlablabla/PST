@@ -1410,11 +1410,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Natch
+  nameText: Nacht
   nameColor: {r: 0.35294116, g: 0.35294116, b: 0.35294116, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -26812,6 +26812,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d00f4b34a22fcc3419b57852bfdb289a, type: 3}
   - {fileID: 21300000, guid: 30cee8a47051a8441b56a95793034475, type: 3}
   - {fileID: 21300000, guid: 9162e6d8182d87b42b84d4f1b2e6a3a9, type: 3}
+  - {fileID: 21300000, guid: dabf89fca1e87e64b83942dcb0798db4, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -36643,6 +36644,30 @@ GameObject:
   - component: {fileID: 1978094962}
   - component: {fileID: 1978094963}
   - component: {fileID: 1978094961}
+  - component: {fileID: 1978094968}
+  - component: {fileID: 1978094967}
+  - component: {fileID: 1978094966}
+  - component: {fileID: 1978094965}
+  - component: {fileID: 1978094970}
+  - component: {fileID: 1978094971}
+  - component: {fileID: 1978094969}
+  - component: {fileID: 1978094978}
+  - component: {fileID: 1978094977}
+  - component: {fileID: 1978094976}
+  - component: {fileID: 1978094975}
+  - component: {fileID: 1978094974}
+  - component: {fileID: 1978094973}
+  - component: {fileID: 1978094972}
+  - component: {fileID: 1978094981}
+  - component: {fileID: 1978094980}
+  - component: {fileID: 1978094979}
+  - component: {fileID: 1978094985}
+  - component: {fileID: 1978094984}
+  - component: {fileID: 1978094983}
+  - component: {fileID: 1978094982}
+  - component: {fileID: 1978094988}
+  - component: {fileID: 1978094987}
+  - component: {fileID: 1978094986}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -36666,7 +36691,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 403
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -36675,8 +36700,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1978094962}
-  selectedCommands: []
+  - {fileID: 1978094970}
+  selectedCommands:
+  - {fileID: 1978094986}
   variables: []
   description: 
   stepPause: 0
@@ -36701,10 +36727,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: 
+  storyText: '...'
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: dabf89fca1e87e64b83942dcb0798db4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -36728,18 +36754,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 12
-    y: 104
+    x: 6
+    y: 99
     width: 140
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
   blockName: Nivel1_empieza
-  description: 
+  description: Mundo de pesadillas
   eventHandler: {fileID: 1978094963}
   commandList:
   - {fileID: 1978094961}
+  - {fileID: 1978094968}
+  - {fileID: 1978094967}
+  - {fileID: 1978094966}
+  - {fileID: 1978094965}
 --- !u!114 &1978094963
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -36753,7 +36783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1978094962}
-  waitForFrames: 1
+  waitForFrames: 5
 --- !u!4 &1978094964
 Transform:
   m_ObjectHideFlags: 0
@@ -36767,6 +36797,647 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978094965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  storyText: "Veo la figura de algo al final de la habitaci\xF3n, me pregunto que
+    ser\xE1."
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094966
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: "Sin embargo es extra\xF1amente m\xE1s grande que la m\xEDa o quiz\xE1s
+    sea yo el que haya empeque\xF1ecido\u2026"
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094967
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  storyText: "\xBFPor qu\xE9 me siento tan raro? Cre\xEDa que me hab\xEDa despertado,
+    esta habitaci\xF3n parece tan real\u2026"
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094968
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: '...'
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: dabf89fca1e87e64b83942dcb0798db4, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: "\xA1HEY! \xBFQui\xE9n eres t\xFA? no deber\xEDas estar aqu\xED, regresa
+    r\xE1pidamente al mundo del que vienes"
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 18
+    y: 193
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 6
+  blockName: Nivel1_ npc
+  description: "Conversaci\xF3n npc"
+  eventHandler: {fileID: 1978094971}
+  commandList:
+  - {fileID: 1978094969}
+  - {fileID: 1978094978}
+  - {fileID: 1978094977}
+  - {fileID: 1978094976}
+  - {fileID: 1978094975}
+  - {fileID: 1978094974}
+  - {fileID: 1978094973}
+  - {fileID: 1978094972}
+  - {fileID: 1978094981}
+  - {fileID: 1978094980}
+  - {fileID: 1978094979}
+  - {fileID: 1978094985}
+  - {fileID: 1978094984}
+  - {fileID: 1978094983}
+  - {fileID: 1978094982}
+  - {fileID: 1978094988}
+  - {fileID: 1978094987}
+  - {fileID: 1978094986}
+--- !u!114 &1978094971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000864f8e9e1748a39807861d0e60e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1978094970}
+  keyPressType: 0
+  keyCode: 113
+--- !u!114 &1978094972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: "(mira su cuello)\n\xA1ERES UNO DE LOS ELEGIDOS! Por eso est\xE1s aqu\xED."
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: 'Creo que no he sido lo suficientemente claro.
+
+    Espera... '
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  storyText: "\u2026"
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: "\xBFMonstruos? Hace a\xF1os que no sue\xF1o con monstruos, tanto estr\xE9s
+    en el trabajo ha tenido que trastornarme. "
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: d00f4b34a22fcc3419b57852bfdb289a, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: "sino tienes la sangre fr\xEDa de matarlos no sobrevivir\xE1s ni un d\xEDa."
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: Se rumorea que la carne humana es exquisita y que los monstruos que la
+    prueban pierden la cabeza y son incapaces de resistirse a ella
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: "si alguno de los monstruos que viven por esta zona aparece correr\xE1s
+    un grave peligro\u2026"
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: "un mundo que est\xE1 entre la realidad y los sue\xF1os."
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  storyText: "Solo aquellos que padezcan el trastorno de la par\xE1lisis del sue\xF1o
+    podr\xE1n entrar en el mundo de las pesadillas"
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  storyText: "Espera\u2026\xBFUno de los elegidos? \xBFElegidos para qu\xE9?"
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: b8d1ad790df949149bc2e82198289d49, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: "Si estuvieras so\xF1ando estar\xEDas en el mundo de los sue\xF1os, no
+    en el de las pesadillas, ya lo entender\xE1s\u2026 !espero volver a verte elegido!"
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: "\xBFEntonces sigo en mi cama y ahora estoy so\xF1ando? No entiendo nada\u2026"
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 30cee8a47051a8441b56a95793034475, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: pero en realidad no te has movido de donde estas.
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  storyText: Tu mente ha despertado, por eso sientes que puedes ver lo que hay a tu
+    alrededor y levantarte
+  description: 
+  character: {fileID: 62526195}
+  portrait: {fileID: 21300000, guid: 18f9d0e409a2921459a73dc10e900614, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  storyText: "Quiz\xE1s deber\xEDa buscar una forma de salir de aqu\xED."
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  indentLevel: 0
+  storyText: "Bueno... \xBFQu\xE9 deber\xEDa hacer ahora? "
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1978094988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978094959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  storyText: "Creo que deber\xEDa dejar mi trabajo actual y convertirme en escritor\u2026
+    o eso o ir al psic\xF3logo si es que este sitio es \u201Creal\u201D "
+  description: 
+  character: {fileID: 1461608562}
+  portrait: {fileID: 21300000, guid: 12421acb889e5074fbc8437e2aacb370, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &1985314456
 Prefab:
   m_ObjectHideFlags: 0
