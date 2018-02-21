@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Seeker))]
-public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
+public class Enemy_AI_StrangeDreams : MonoBehaviour {
 
     //enemigo patroll
     public LayerMask enemyMask;

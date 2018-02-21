@@ -4,15 +4,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Seeker))]
-public class Enemy_AI_StrangeDreams : MonoBehaviour {
+public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
 
-    //enemigo patroll
+    //enemigo Patrol
     public LayerMask enemyMask;
     Rigidbody2D myBody;
     Transform myTrans;
     float myWidth;
+    //Este es el unico que merece la pena de Patrol
+    private Patrol para;
 
-    //Mi velocidad, aunque ya establecida, no se donde y si estoy chocando. ESTO ES LO DE CHOCAR Y CAMBIAR DE DIRECCION
+    //Mi velocidad y si estoy chocando. ESTO ES LO DE CHOCAR Y CAMBIAR DE DIRECCION
     public float velocity = 10f;
     public bool colliding;
     public Transform sightStart;
@@ -52,23 +54,17 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
 
     void Start () {
 
-        /*//enemigo
-        myTrans = this.transform;
-        myBody = this.GetComponent<Rigidbody2D>();
-        myWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;*/
+
+        //Patrol
+        para = GetComponent<Patrol>();
+        para.enabled = true;
 
         //Pathfinding
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
-        if (target == null)
-        {
-            //Debug.LogError("No player found-No jugador encontrado");
-            return;
-        }
         //start a new path to the target position, return the result to the OnPathComplete method
         seeker.StartPath(transform.position, target.position, OnPathComplete);
-
         StartCoroutine(UpdatePath());
 
 	}
@@ -107,9 +103,8 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
         //movimiento continuo a una direccion, de base establecido a la derecha le la pantalla
         if (target == null)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
         }
-
 
 
         //Si colisiona, mult por -1 su vel y direccion, lo que le hace cambiar la direccion y velocidad al sentido opuesto
@@ -125,6 +120,9 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
     }
     void FixedUpdate()
     {
+
+        //No tengo ni idea de que es esto
+        
         /*Vector2 LineCastPos = myTrans.position - myTrans.right * myWidth;
         bool isCrounded = Physics2D.Linecast(LineCastPos,LineCastPos + Vector2.down,enemyMask);
         //si no hay suelo girate
@@ -135,6 +133,7 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
             myTrans.eulerAngles = currRot;
 
         }
+
         //Siempre adelante
         Vector2 myVel = myBody.velocity;
         myVel.x = speed;
@@ -164,6 +163,7 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
         pathIsEnded = false;
         //Direcction to the next waypoint
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+        //Debug.Log(dir.ToString());
         dir *= speed * Time.fixedDeltaTime;
         //Debug.Log(dir.x + " ||| " + dir.y + " ||| " + dir.z);
         //Move the AI
@@ -177,34 +177,37 @@ public class Enemy_AI_StrangeDreams : MonoBehaviour {
         }
 
     }
+
+    //Resumen de estas dos funciones: Hacen referencia al triger de deteccion, siempre estan buscabdo a alguien
+    //Ese alguien se llama caos, un objeto, si un objeto llamado "Kaos" entra, ejecuta el script seeker, y
+    //Ademas desactiva el escript Patrol, como pone mas abajo. Si no tnego detro de mi ningun objeto llamado
+    //Kaos, entonces no hagas nada, pon que el target sea nadie y ademas activa el sript Patrol.  
     void OnTriggerEnter2D(Collider2D other)
     {
         if (target == null)
         {
-            Debug.Log(other.gameObject.name == "caleyaplayer");
-            if (other.gameObject.name == "caleyaplayer")
+            //Debug.Log(other.gameObject.name == "Kaos");
+            if (other.gameObject.name == "Kaos")
             {
                 target = other.gameObject.transform;
                 seeker.StartPath(transform.position, target.position, OnPathComplete);
-
                 StartCoroutine(UpdatePath());
-            }
+                //esto desactiva el patrol
+                para.enabled = false;
+            }  
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
         if (target != null)
         {
-            if (other.gameObject.name == "caleyaplayer")
+            if (other.gameObject.name == "Kaos")
             {
+                
                 target = null;
+                //esto activa el patrol
+                para.enabled = true;
             }
         }
     }
-    public class Jump : MonoBehaviour
-    {
-        private Rigidbody2D rb;
-
-    }
-
 }
