@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Look_Back1 : MonoBehaviour {
 
-    
+    public Transform StatusIndicator;
     public Transform Enemy;
     public Transform target;
     
@@ -28,7 +28,7 @@ public class Look_Back1 : MonoBehaviour {
             {
                 target = other.gameObject.transform;
                 Enemy.localScale = new Vector2(Enemy.transform.localScale.x * -1, Enemy.transform.localScale.y);
-                
+                StatusIndicator.localScale = new Vector2(StatusIndicator.transform.localScale.x * -1, StatusIndicator.transform.localScale.y);
             }
         }  
     }

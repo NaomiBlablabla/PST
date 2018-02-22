@@ -109,7 +109,7 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
 
         //Si colisiona, mult por -1 su vel y direccion, lo que le hace cambiar la direccion y velocidad al sentido opuesto
         colliding = Physics2D.Linecast(sightStart.position, sightEnd.position, detectWhat);
-
+        /*
         if (colliding)
         {
 
@@ -117,6 +117,7 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
             velocity *= -1;
 
         }
+        */
     }
     void FixedUpdate()
     {
