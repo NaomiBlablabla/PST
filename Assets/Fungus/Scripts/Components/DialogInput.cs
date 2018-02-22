@@ -16,7 +16,7 @@ namespace Fungus
         /// <summary> Click anywhere on screen to advance. </summary>
         //ClickAnywhere,
         /// <summary> Click anywhere on Say Dialog to advance. </summary>
-        //ClickOnDialog,
+        ClickOnDialog,
         /// <summary> Click on continue button to advance. </summary>
         ClickOnButton
     }
@@ -103,13 +103,13 @@ namespace Fungus
                     SetNextLineFlag();
                 }
                 break;*/
-            /*case ClickMode.ClickOnDialog:
+            case ClickMode.ClickOnDialog:
                 if (dialogClickedFlag)
                 {
                     SetNextLineFlag();
                     dialogClickedFlag = false;
                 }
-                break;*/
+                break;
             }
 
             if (ignoreClickTimer > 0f)
@@ -165,11 +165,11 @@ namespace Fungus
             ignoreClickTimer = nextClickDelay;
 
             // Only applies in Click On Dialog mode
-            /*
+            
             if (clickMode == ClickMode.ClickOnDialog)
             {
                 dialogClickedFlag = true;
-            }*/
+            }
         }
 
         /// <summary>

@@ -9,6 +9,8 @@ namespace UnityStandardAssets._2D
     [RequireComponent(typeof (PlatformerCharacter2D))]
     public class Platformer2DUserControl : MonoBehaviour
     {
+        //vida
+
         //referencias
         Rigidbody2D rb2D;
         Animator anim;
@@ -16,22 +18,45 @@ namespace UnityStandardAssets._2D
         private PlatformerCharacter2D m_Character;
         private bool jump;
 
+        /*
         [SerializeField]
-        private int curHealth;
-        private int maxHealth = 100;
+        private StatusIndicatorKaos statusIndicator;
+        */
+        [System.Serializable]
+        public class KaosStats
+        {
+            public int maxHealth = 100;
+            public int curHealth;
 
+            public void Init()
+            {
+                curHealth = maxHealth;
+            }
+
+        }
+        public KaosStats stats = new KaosStats();
+
+        //[Header("Optional: ")]
+        //[SerializeField]
+        //private StatusIndicatorKaos statusIndicator;
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
         }
+
 
         void Start()
         {
             rb2D = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
 
-            curHealth = maxHealth;
-
+            stats.Init();
+           /* 
+            if (statusIndicator != null)
+            {
+                statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
+            }*/
+            
         }
 
 
@@ -43,11 +68,7 @@ namespace UnityStandardAssets._2D
                 jump = Input.GetButtonDown("Jump");
             }
 
-            if (curHealth > maxHealth)
-            {
-                curHealth = maxHealth;
-            }
-            if (curHealth <= 0)
+            if (stats.curHealth <= 0)
             {
                 Die();
             }
@@ -67,6 +88,7 @@ namespace UnityStandardAssets._2D
 
         void Die()
         {
+            anim.SetTrigger("Death");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         }
