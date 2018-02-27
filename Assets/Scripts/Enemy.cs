@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour {
     //referencias
     Animator anim;
 
-
     [System.Serializable]
     public class EnemyStats
     {
@@ -78,9 +77,18 @@ public class Enemy : MonoBehaviour {
 
     void Die()
     {
-        //anim.SetTrigger("Death");
+        anim.SetTrigger("Dead");
+
+        Destroy();
+                  
+        
+        //anim.SetBool("Death",death);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //GameMaster.KillEnemy(this);
+    }
+
+    void Destroy()
+    {
         Destroy(this.gameObject);
     }
 }

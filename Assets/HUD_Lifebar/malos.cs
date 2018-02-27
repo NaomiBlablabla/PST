@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class malos : MonoBehaviour {
 
-
-   /* private void OnTriggerEnter2D(Collider2D collision)
+/*
+   private void OnTriggerEnter2D(Collider2D collision)
     {
         
         Barra_Vida.health -= 5f;

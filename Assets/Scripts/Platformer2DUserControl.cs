@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Collections;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,11 +15,8 @@ namespace UnityStandardAssets._2D
 
         private PlatformerCharacter2D m_Character;
         private bool jump;
-
-        /*
-        [SerializeField]
-        private StatusIndicatorKaos statusIndicator;
-        */
+        
+        
         [System.Serializable]
         public class KaosStats
         {
@@ -36,9 +31,10 @@ namespace UnityStandardAssets._2D
         }
         public KaosStats stats = new KaosStats();
 
-        //[Header("Optional: ")]
-        //[SerializeField]
-        //private StatusIndicatorKaos statusIndicator;
+        [Header("Optional: ")]
+        [SerializeField]
+        private StatusIndicatorKaos statusIndicator;
+
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
@@ -51,16 +47,16 @@ namespace UnityStandardAssets._2D
             anim = GetComponent<Animator>();
 
             stats.Init();
-           /* 
+           
             if (statusIndicator != null)
             {
                 statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
-            }*/
+            }
             
         }
 
 
-        private void Update()
+        private void Update() //bool death
         {
             if (!jump)
             {
@@ -86,11 +82,13 @@ namespace UnityStandardAssets._2D
             jump = false;
         }
 
-        void Die()
+        void Die( )//bool death)
         {
-            anim.SetTrigger("Death");
+            anim.SetTrigger("Morir");
+            //anim.SetBool("Death", death);
+            Destroy(this.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+            
         }
     }
 }

@@ -53,6 +53,8 @@ namespace Fungus
         protected float fadeCoolDownTimer = 0f;
 
         private Platformer2DUserControl player;
+        [SerializeField]
+        private SayDialog Dialog;
 
         protected Sprite currentCharacterImage;
 
@@ -124,13 +126,44 @@ namespace Fungus
             
             return writerAudio;
         }
+        /*
+        public void PauseKaos()
+        {
 
+            if (Dialog.gameObject.activeInHierarchy == false)
+            {
+
+                Dialog.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                player.GetComponent<Platformer2DUserControl>().enabled = false;
+            }
+            else
+            {
+
+                Dialog.gameObject.SetActive(false);
+                
+                player.GetComponent<Platformer2DUserControl>().enabled = true;
+            }
+        }*/
 
         protected virtual void Start()
         {
 
             // Dialog always starts invisible, will be faded in when writing starts
             GetCanvasGroup().alpha = 0f;
+            //player.GetComponent<Platformer2DUserControl>().enabled = false;
+            GetComponent<Platformer2DUserControl>().enabled = false;
+            /*
+            if (Dialog.gameObject.activeInHierarchy == false)
+            {
+
+                Dialog.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                player.GetComponent<Platformer2DUserControl>().enabled = false;
+            }*/
+            //PauseKaos();
+            //Time.timeScale = 0;
+
 
 
             // Add a raycaster if none already exists so we can handle dialog input
@@ -154,39 +187,7 @@ namespace Fungus
                 SetCharacterImage(null);
             }
         }
-        /*
-        void Update()
-        {
-            if ((canvasGroup == true))
-            {
-                Pause();
-            }
-        }
-
-        public void Pause()
-        {
-            //Start();
-            //Time.timeScale = 0;
-            player.GetComponent<Platformer2DUserControl>().enabled = false;
-        }   
-
-            /*
-            if (menupausa.gameObject.activeInHierarchy == false)
-            {
-
-                menupausa.gameObject.SetActive(true);
-                Time.timeScale = 0;
-                player.GetComponent<Platformer2DUserControl>().enabled = false;
-            }
-            else
-            {
-
-                menupausa.gameObject.SetActive(false);
-                Time.timeScale = 1;
-                player.GetComponent<Platformer2DUserControl>().enabled = true;
-            }
-        }*/
-
+      
         protected virtual void LateUpdate()
         {
             UpdateAlpha();

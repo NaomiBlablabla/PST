@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets._2D;
-using UnityEngine.SceneManagement;
 
-public class TriggerEvent2 : MonoBehaviour
-{
-    public string levelToLoad;
-    public GameObject guiObject;
+public class Trigger_Dialog : MonoBehaviour {
+
+    [SerializeField]
+    GameObject guiObject;
+    [SerializeField]
+    GameObject player;
 
     void Start()
     {
@@ -19,10 +19,7 @@ public class TriggerEvent2 : MonoBehaviour
         if (collider2D.gameObject.tag == "Player")
         {
             guiObject.SetActive(true);
-            if (guiObject.activeInHierarchy == true && Input.GetButtonDown("Use"))
-            {
-                SceneManager.LoadScene(levelToLoad);
-            }
+
 
         }
     }
