@@ -151,20 +151,7 @@ namespace Fungus
 
             // Dialog always starts invisible, will be faded in when writing starts
             GetCanvasGroup().alpha = 0f;
-            //player.GetComponent<Platformer2DUserControl>().enabled = false;
-            GetComponent<Platformer2DUserControl>().enabled = false;
-            /*
-            if (Dialog.gameObject.activeInHierarchy == false)
-            {
-
-                Dialog.gameObject.SetActive(true);
-                Time.timeScale = 0;
-                player.GetComponent<Platformer2DUserControl>().enabled = false;
-            }*/
-            //PauseKaos();
-            //Time.timeScale = 0;
-
-
+            player.GetComponent<Platformer2DUserControl>().enabled = false;
 
             // Add a raycaster if none already exists so we can handle dialog input
             GraphicRaycaster raycaster = GetComponent<GraphicRaycaster>();
