@@ -1,4 +1,5 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -82,13 +83,22 @@ namespace UnityStandardAssets._2D
             jump = false;
         }
 
-        void Die( )//bool death)
+        IEnumerator WaitTwoSeconds()
         {
             anim.SetTrigger("Morir");
-            //anim.SetBool("Death", death);
-            Destroy(this.gameObject);
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        void Die( )//bool death)
+        {
+            StartCoroutine("WaitTwoSeconds");
             
+            //anim.SetBool("Death", death);
+            //Destroy(this.gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
+
         }
     }
 }

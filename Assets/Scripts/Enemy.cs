@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
     //referencias
     Animator anim;
 
+
     [System.Serializable]
     public class EnemyStats
     {
@@ -52,6 +53,7 @@ public class Enemy : MonoBehaviour {
         
         if (stats.curHealth <= 0)
         {
+            anim.SetTrigger("Dead");
             Die();
         }
 
@@ -75,20 +77,28 @@ public class Enemy : MonoBehaviour {
 
     }
 
+
+    IEnumerator WaitTwoSeconds()
+    {       
+        yield return new WaitForSeconds(0.5f);        
+        Destroy(gameObject);
+    }
+
+    /*void WaitAndDestroy()
+    {
+        yield WaitForSeconds (delay);
+        //yield WaitForSeconds(delay);
+
+        Destroy(gameObject);
+    }*/
+
     void Die()
     {
-        anim.SetTrigger("Dead");
+        StartCoroutine("WaitTwoSeconds");
 
-        Destroy();
-                  
-        
         //anim.SetBool("Death",death);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //GameMaster.KillEnemy(this);
     }
 
-    void Destroy()
-    {
-        Destroy(this.gameObject);
-    }
 }
