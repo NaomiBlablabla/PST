@@ -7,7 +7,7 @@ public class Barra_daño : MonoBehaviour
 {
     Image daño_lifebar;
     float maxHealth = 100f;
-    public static float health;
+    public float health;
 
     private void Start()
     {

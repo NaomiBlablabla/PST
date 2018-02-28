@@ -55,7 +55,11 @@ namespace UnityStandardAssets._2D
             }
             
         }
+        public void Damage(int damage)
+        {
+            stats.curHealth -= damage;
 
+        }
 
         private void Update() //bool death
         {

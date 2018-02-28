@@ -157,7 +157,7 @@ public class Enemy_AI_StrangeDreams1 : MonoBehaviour {
         {
             if (pathIsEnded)
                 return;
-            Debug.Log("End of path reached");
+            //Debug.Log("End of path reached");
             pathIsEnded = true;
             return;
         }

@@ -9,7 +9,7 @@ public class Barra_Vida : MonoBehaviour
     Image vida_lifebar;
     Image daño_lifebar;
     float maxHealth = 100f;
-    public static float health;
+    public float health;
 
     private void Start()
     {
