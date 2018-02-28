@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Attack
   - Enemy
+  - Collect
+  - Manager
   layers:
   - Default
   - TransparentFX
