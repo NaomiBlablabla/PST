@@ -13,13 +13,15 @@ namespace UnityStandardAssets._2D
         //referencias
         Rigidbody2D rb2D;
         Animator anim;
+        [SerializeField]
+        GameObject player;
 
         private PlatformerCharacter2D m_Character;
         private bool jump;
         
         
         [System.Serializable]
-        public class KaosStats
+        private class KaosStats
         {
             public int maxHealth = 100;
             public int curHealth;
@@ -30,7 +32,9 @@ namespace UnityStandardAssets._2D
             }
 
         }
-        public KaosStats stats = new KaosStats();
+
+        [SerializeField]
+        private KaosStats stats = new KaosStats();
 
         [Header("Optional: ")]
         [SerializeField]
@@ -71,6 +75,7 @@ namespace UnityStandardAssets._2D
 
             if (stats.curHealth <= 0)
             {
+                anim.SetTrigger("Morir");
                 Die();
             }
 
@@ -88,9 +93,12 @@ namespace UnityStandardAssets._2D
         }
 
         IEnumerator WaitTwoSeconds()
-        {
-            anim.SetTrigger("Morir");
-            yield return new WaitForSeconds(2);
+        {      
+            //anim.SetTrigger("Morir");
+            Debug.Log("Me estoy muriendo");
+            player.GetComponent<Platformer2DUserControl>().enabled = false;
+            Debug.Log("No puedo moverme");
+            yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 

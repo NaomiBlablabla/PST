@@ -40,6 +40,7 @@ namespace Fungus
 
         [Tooltip("Close any other open Say Dialogs when this one is active")]
         [SerializeField] protected bool closeOtherDialogs;
+        //[SerializeField] GameObject player;
 
         protected float startStoryTextWidth; 
         protected float startStoryTextInset;
@@ -52,9 +53,12 @@ namespace Fungus
         protected float targetAlpha = 0f;
         protected float fadeCoolDownTimer = 0f;
 
+        //[SerializeField]
         private Platformer2DUserControl player;
+        //[SerializeField] GameObject player;
+
         [SerializeField]
-        private SayDialog Dialog;
+         SayDialog Dialog;
 
         protected Sprite currentCharacterImage;
 
@@ -126,32 +130,15 @@ namespace Fungus
             
             return writerAudio;
         }
-        /*
-        public void PauseKaos()
-        {
 
-            if (Dialog.gameObject.activeInHierarchy == false)
-            {
-
-                Dialog.gameObject.SetActive(true);
-                Time.timeScale = 0;
-                player.GetComponent<Platformer2DUserControl>().enabled = false;
-            }
-            else
-            {
-
-                Dialog.gameObject.SetActive(false);
-                
-                player.GetComponent<Platformer2DUserControl>().enabled = true;
-            }
-        }*/
 
         protected virtual void Start()
         {
 
             // Dialog always starts invisible, will be faded in when writing starts
             GetCanvasGroup().alpha = 0f;
-            player.GetComponent<Platformer2DUserControl>().enabled = false;
+
+            Debug.Log("empiza dialogo");
 
             // Add a raycaster if none already exists so we can handle dialog input
             GraphicRaycaster raycaster = GetComponent<GraphicRaycaster>();
@@ -178,6 +165,12 @@ namespace Fungus
         protected virtual void LateUpdate()
         {
             UpdateAlpha();
+            Debug.Log("empiza dialogo5");
+            if (GetCanvasGroup().alpha == 0f)
+            {
+                Debug.Log("empiza dialogo2");
+                player.GetComponent<Platformer2DUserControl>().enabled = false;
+            }
 
             if (continueButton != null)
             {
@@ -189,6 +182,7 @@ namespace Fungus
         {
             if (GetWriter().IsWriting)
             {
+                Debug.Log("empiza dialogo6");
                 targetAlpha = 1f;
                 fadeCoolDownTimer = 0.1f;
             }
@@ -232,6 +226,7 @@ namespace Fungus
 
         #region Public members
 
+
 		public Character SpeakingCharacter { get { return speakingCharacter; } }
 
         /// <summary>
@@ -244,14 +239,19 @@ namespace Fungus
         /// </summary>
         public static SayDialog GetSayDialog()
         {
+            var activeCharacters = Character.ActiveCharacters;
+
             if (ActiveSayDialog == null)
             {
-				SayDialog sd = null;
 
-				// Use first active Say Dialog in the scene (if any)
-				if (activeSayDialogs.Count > 0)
+                Debug.Log("empiza dialogo cero");
+				SayDialog sd = null;
+                //player.GetComponent<Platformer2DUserControl>().enabled = false;
+                // Use first active Say Dialog in the scene (if any)
+                if (activeSayDialogs.Count > 0)
 				{
-					sd = activeSayDialogs[0];
+                    Debug.Log("empiza dialogo2");
+                    sd = activeSayDialogs[0];
 				}
 
                 if (sd != null)
