@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour {
     public Collider2D attackTrigger;
     private Animator anim;
 
+    private float pushPower = 10.0f;
+
     void Awake ()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -20,8 +22,11 @@ public class PlayerAttack : MonoBehaviour {
         attackTrigger.enabled = false;
     }
 
+
+
     void Update()
     {
+        //Si se pulsa la letra "m" (ataque rodillazo) y no está atacando 
         if(Input.GetButtonDown("Knee")&& !attacking)
         {
             attacking = true;

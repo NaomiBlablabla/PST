@@ -32,6 +32,7 @@ namespace Fungus
             if((FireOn & UpdateMessageFlags.Update) != 0)
             {
                 ExecuteBlock();
+
             }
         }
 

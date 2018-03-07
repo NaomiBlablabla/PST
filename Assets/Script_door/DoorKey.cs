@@ -20,7 +20,7 @@ public class DoorKey : MonoBehaviour
     {
         if (inTrigger)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.J) || Input.GetButtonDown("Llave"))
             {
                 DoorScript.doorKey = true;
                 Destroy(this.gameObject);
@@ -32,7 +32,7 @@ public class DoorKey : MonoBehaviour
     {
         if (inTrigger)
         {
-            GUI.Box(new Rect(820, 400, 300, 65), "Press E to take key");
+            GUI.Box(new Rect(820, 400, 300, 65), "Press J to take key");
             GUI.skin.box.fontSize = 25;
         }
     }
