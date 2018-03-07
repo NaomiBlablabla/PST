@@ -138,6 +138,8 @@ namespace Fungus
             // Dialog always starts invisible, will be faded in when writing starts
             GetCanvasGroup().alpha = 0f;
 
+            Debug.Log("empiza dialogo");
+
             // Add a raycaster if none already exists so we can handle dialog input
             GraphicRaycaster raycaster = GetComponent<GraphicRaycaster>();
             if (raycaster == null)
@@ -163,21 +165,12 @@ namespace Fungus
         protected virtual void LateUpdate()
         {
             UpdateAlpha();
-
-            
-            //if (GetCanvasGroup().alpha == 1f)
-            //{
-            //    Time.timeScale = 0;               
-            //    player.GetComponent<Platformer2DUserControl>().enabled = false;
-            //}
-            //else
-            //{
-            //    if (GetCanvasGroup().alpha == 0f)
-            //    {
-            //        Time.timeScale = 1;
-            //        player.GetComponent<Platformer2DUserControl>().enabled = true;
-            //    }
-            //}
+            Debug.Log("empiza dialogo5");
+            if (GetCanvasGroup().alpha == 0f)
+            {
+                Debug.Log("empiza dialogo2");
+                player.GetComponent<Platformer2DUserControl>().enabled = false;
+            }
 
             if (continueButton != null)
             {
@@ -189,6 +182,7 @@ namespace Fungus
         {
             if (GetWriter().IsWriting)
             {
+                Debug.Log("empiza dialogo6");
                 targetAlpha = 1f;
                 fadeCoolDownTimer = 0.1f;
             }
@@ -249,10 +243,14 @@ namespace Fungus
 
             if (ActiveSayDialog == null)
             {
+
+                Debug.Log("empiza dialogo cero");
 				SayDialog sd = null;
+                //player.GetComponent<Platformer2DUserControl>().enabled = false;
                 // Use first active Say Dialog in the scene (if any)
                 if (activeSayDialogs.Count > 0)
 				{
+                    Debug.Log("empiza dialogo2");
                     sd = activeSayDialogs[0];
 				}
 

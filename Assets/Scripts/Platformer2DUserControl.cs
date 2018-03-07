@@ -13,7 +13,8 @@ namespace UnityStandardAssets._2D
         //referencias
         Rigidbody2D rb2D;
         Animator anim;
-        [SerializeField] GameObject player;
+        [SerializeField]
+        GameObject player;
 
         private PlatformerCharacter2D m_Character;
         private bool jump;
@@ -22,7 +23,6 @@ namespace UnityStandardAssets._2D
         [System.Serializable]
         private class KaosStats
         {
-
             public int maxHealth = 100;
             public int curHealth;
 
@@ -67,58 +67,50 @@ namespace UnityStandardAssets._2D
 
         private void Update() //bool death
         {
-
+            if (!jump)
+            {
+                // Read the jump input in Update so button presses aren't missed.
+                jump = Input.GetButtonDown("Jump");
+            }
 
             if (stats.curHealth <= 0)
             {
-                
                 anim.SetTrigger("Morir");
-                this.enabled = false;
                 Die();
             }
 
         }
 
 
-        float delay;
-
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool crouch = Input.GetAxis("Vertical") < 0;
+            bool crouch = Input.GetButton("Down");
             float h = Input.GetAxis("Horizontal");
-
-            delay += Time.deltaTime;
-
-
-            if (delay > 0.1)
-            {
-                // Read the jump input in Update so button presses aren't missed.
-                jump = Input.GetAxis("Vertical") > 0;
-                delay = 0;
-            }
-            else
-                jump = false;
-
             // Pass all parameters to the character control script.
             m_Character.Move(h, crouch, jump);
             jump = false;
         }
 
-        //
         IEnumerator WaitTwoSeconds()
         {      
-            yield return new WaitForSeconds(5f);
+            //anim.SetTrigger("Morir");
+            Debug.Log("Me estoy muriendo");
+            player.GetComponent<Platformer2DUserControl>().enabled = false;
+            Debug.Log("No puedo moverme");
+            yield return new WaitForSeconds(1.5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        //Función para morir que llama a una Corrutina
-        void Die( )
+        void Die( )//bool death)
         {
-            Debug.Log("Me estoy muriendo_die");
             StartCoroutine("WaitTwoSeconds");
-           
-           
+            
+            //anim.SetBool("Death", death);
+            //Destroy(this.gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
+
         }
     }
 }
