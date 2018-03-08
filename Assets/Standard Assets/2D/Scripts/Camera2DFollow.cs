@@ -12,12 +12,12 @@ namespace UnityStandardAssets._2D
         public float lookAheadMoveThreshold = 0.1f;
 
         private float m_OffsetZ;
-        private Vector3 m_LastTargetPosition;
+        public Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
 
         // Use this for initialization
-        private void Start()
+        public void Start()
         {
             m_LastTargetPosition = target.position;
             m_OffsetZ = (transform.position - target.position).z;
@@ -26,7 +26,7 @@ namespace UnityStandardAssets._2D
 
 
         // Update is called once per frame
-        private void Update()
+        public void Update()
         {
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (target.position - m_LastTargetPosition).x;

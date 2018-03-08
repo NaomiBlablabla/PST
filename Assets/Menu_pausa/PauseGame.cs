@@ -7,7 +7,7 @@ public class PauseGame : MonoBehaviour {
     [SerializeField] Canvas menupausa;
 
     void Update () {
-	    if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButton("Cancel"));
         {
             Pause();
         }

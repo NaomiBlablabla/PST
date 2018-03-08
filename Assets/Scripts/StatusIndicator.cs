@@ -29,7 +29,7 @@ public class StatusIndicator : MonoBehaviour {
         {
             Debug.LogError("no heal text referenced");
         }
-
+        /*
         healthBarColor = healthBarRect.GetComponent<Image>();
 
         GradientColorKey[] gck = new GradientColorKey[3];
@@ -51,7 +51,7 @@ public class StatusIndicator : MonoBehaviour {
         gak[1].time = 1.0F;
 
         g.SetKeys(gck, gak);
-
+        */
 
 
 
