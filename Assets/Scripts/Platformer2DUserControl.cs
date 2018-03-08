@@ -62,17 +62,25 @@ namespace UnityStandardAssets._2D
             stats.curHealth -= damage;
 
         }
-
-        private void Update() //bool death
+        void OnTriggerEnter2D(Collider2D other)
         {
-            if (!jump)
+            if (other.tag == "deadly")
             {
-                // Read the jump input in Update so button presses aren't missed.
-                jump = Input.GetButtonDown("Jump");
+                vida.health -= 2f;
+                //stats.curHealth -= damage;
             }
+        }
+
+        private void Update() 
+        {
 
             if (stats.curHealth <= 0)
             {
+                Debug.Log("parar");
+                anim.SetTrigger("Morir");
+                Debug.Log("parar");
+                this.enabled = false;
+                Debug.Log("parar2");
                 Die();
             }
 
@@ -107,31 +115,19 @@ namespace UnityStandardAssets._2D
 
         IEnumerator WaitTwoSeconds()
         {
-            anim.SetTrigger("Morir");
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        void Die( )//bool death)
+        //Función para morir que llama a una Corrutina
+        void Die()
         {
+            Debug.Log("Me estoy muriendo_die");
             StartCoroutine("WaitTwoSeconds");
-            
-            //anim.SetBool("Death", death);
-            //Destroy(this.gameObject);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
+
 
         }
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.tag == "deadly")
-            {
-                vida.health -= 2f;
-
-                Debug.Log("hola");
-                //stats.curHealth -= damage;
-            }
-        }
+        
     }
 
 }

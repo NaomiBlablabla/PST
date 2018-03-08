@@ -165,12 +165,8 @@ namespace Fungus
         protected virtual void LateUpdate()
         {
             UpdateAlpha();
-            Debug.Log("empiza dialogo5");
-            if (GetCanvasGroup().alpha == 0f)
-            {
-                Debug.Log("empiza dialogo2");
-                player.GetComponent<Platformer2DUserControl>().enabled = false;
-            }
+            Debug.Log("empiza dialogo2");
+            player.GetComponent<Platformer2DUserControl>().enabled = false;
 
             if (continueButton != null)
             {
@@ -182,7 +178,6 @@ namespace Fungus
         {
             if (GetWriter().IsWriting)
             {
-                Debug.Log("empiza dialogo6");
                 targetAlpha = 1f;
                 fadeCoolDownTimer = 0.1f;
             }
