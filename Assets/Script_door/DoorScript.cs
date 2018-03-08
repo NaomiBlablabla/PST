@@ -25,7 +25,7 @@ public class DoorScript : MonoBehaviour
         {
             if (doorKey)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.J))
                 {
                     open = true;
                 }
@@ -52,7 +52,7 @@ public class DoorScript : MonoBehaviour
             {
                 if (doorKey)
                 {
-                    GUI.Box(new Rect(820, 400, 300, 65), "Presiona la tecla E para abrir");
+                    GUI.Box(new Rect(820, 400, 300, 65), "Presiona la tecla J para abrir");
                     GUI.skin.box.fontSize = 25;
                 }
                 else
