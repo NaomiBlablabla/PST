@@ -9,7 +9,8 @@ namespace UnityStandardAssets._2D
     public class Platformer2DUserControl : MonoBehaviour
     {
         //vida
-        public Barra_Vida vida;
+        [SerializeField]
+        private Barra_Vida vida;
         [SerializeField]
         private int dmg1 = 2;
         //referencias

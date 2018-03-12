@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    public float destroyTime;
+    [SerializeField]
+    private float destroyTime;
 
     // Use this for initialization
     void Start()

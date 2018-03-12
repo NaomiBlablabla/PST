@@ -5,8 +5,10 @@ public class DoorScript : MonoBehaviour
 {
 
     public static bool doorKey;
-    public bool open;
-    public bool inTrigger;
+    [SerializeField]
+    private bool open;
+    [SerializeField]
+    private bool inTrigger;
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DoorKey : MonoBehaviour
 {
-
-    public bool inTrigger;
+    [SerializeField]
+    private bool inTrigger;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,7 +32,7 @@ public class DoorKey : MonoBehaviour
     {
         if (inTrigger)
         {
-            GUI.Box(new Rect(820, 400, 300, 65), "Press J to take key");
+            GUI.Box(new Rect(820, 400, 300, 65), "Press B to take key");
             GUI.skin.box.fontSize = 25;
         }
     }

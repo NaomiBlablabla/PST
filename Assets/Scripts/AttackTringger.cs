@@ -18,12 +18,11 @@ public class AttackTringger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log("trigger");
-        //Debug.Log("Grab: " + Input.GetButton("Grab").ToString() + " isTrigger "+ (col.isTrigger != true) + " Is Enemy: "+ col.CompareTag("Enemy"));
+
         if (Input.GetButton("Grab") && col.isTrigger != true && col.CompareTag("Enemy"))
         {
        
-            col.gameObject.GetComponent<Enemy>().Damage(dmg1);//SendMessageUpwards("Damage", dmg);
+            col.gameObject.GetComponent<Enemy>().Damage(dmg1);
             
         }
         else
@@ -31,7 +30,7 @@ public class AttackTringger : MonoBehaviour {
             if (Input.GetButton("Knee") && col.isTrigger != true && col.CompareTag("Enemy"))
             {
                 
-                col.gameObject.GetComponent<Enemy>().Damage(dmg2);//SendMessageUpwards("Damage", dmg);
+                col.gameObject.GetComponent<Enemy>().Damage(dmg2);
 
             }
             else
@@ -39,7 +38,7 @@ public class AttackTringger : MonoBehaviour {
                 if (Input.GetButton("UpKick") && col.isTrigger != true && col.CompareTag("Enemy"))
                 {
                     
-                    col.gameObject.GetComponent<Enemy>().Damage(dmg3);//SendMessageUpwards("Damage", dmg);
+                    col.gameObject.GetComponent<Enemy>().Damage(dmg3);
 
                 }
                 else
@@ -47,7 +46,7 @@ public class AttackTringger : MonoBehaviour {
                     if (Input.GetButton("Punch1") && col.isTrigger != true && col.CompareTag("Enemy"))
                     {
 
-                        col.gameObject.GetComponent<Enemy>().Damage(dmg4);//SendMessageUpwards("Damage", dmg);
+                        col.gameObject.GetComponent<Enemy>().Damage(dmg4);
 
                     }
                     else
@@ -55,7 +54,7 @@ public class AttackTringger : MonoBehaviour {
                         if (Input.GetButton("Punch2") && col.isTrigger != true && col.CompareTag("Enemy"))
                         {
 
-                            col.gameObject.GetComponent<Enemy>().Damage(dmg5);//SendMessageUpwards("Damage", dmg);
+                            col.gameObject.GetComponent<Enemy>().Damage(dmg5);
 
                         }
                     }
@@ -63,14 +62,4 @@ public class AttackTringger : MonoBehaviour {
             }
         }
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

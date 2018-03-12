@@ -10,7 +10,8 @@ public class PlayerAttack : MonoBehaviour {
     private float attackTimer = 0;
     private float attackCd = 0.3f;
 
-    public Collider2D attackTrigger;
+    [SerializeField]
+    private Collider2D attackTrigger;
     private Animator anim;
 
     void Awake ()
